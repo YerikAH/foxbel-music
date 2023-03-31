@@ -9,6 +9,10 @@ export const NavigationMenu = styled.nav`
   top: 0;
   background-color: var(--dark-red);
   overflow: auto;
+  display: none;
+  @media (min-width:850px){
+    display: block;
+  }
 `
 export const MenuBoxUl = styled.div`
   display: grid;
