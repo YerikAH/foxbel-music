@@ -1,0 +1,59 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+/* variables */
+:root{
+  --font-principal : 'Quicksand', sans-serif;
+  --dark-red: #662323;
+  --dark-red-50: #A70000B2;
+  --light-red: #EB5757;
+  --red-principal: #E86060;
+  --black-100: #555555;
+  --black-70: #828282;
+  --white: #FFF;
+}
+
+/* reset css*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+li{
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+  cursor:pointer
+}
