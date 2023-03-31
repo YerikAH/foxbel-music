@@ -1,10 +1,13 @@
+import * as style from '../styles/menu_option'
+
 const MenuOption = () => {
   return (
-    <div>
-        <div>
-            fdsa
-        </div>
-    </div>
+    <style.NavigationMenu>
+      <style.MenuListLink href="" tabIndex={1}>
+        <style.ImageLogo src="" alt="logo"/>
+
+      </style.MenuListLink>
+    </style.NavigationMenu>
   )
 }
 
