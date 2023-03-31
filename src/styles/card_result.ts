@@ -56,5 +56,5 @@ export const HeadingMusic = styled.h5`
 `
 export const TextAutor = styled.p`
   font: normal normal 400 0.75rem/1rem var(--font-principal);
-  color: var(--black-50);
+  color: var(--black-70);
 `

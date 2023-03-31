@@ -16,11 +16,10 @@ export const SimulationMenuOption = styled.div`
   }
 `
 
-export const SectionBox = styled.section``
-export const SectionResults = styled.div`
+export const SectionBox = styled.div``
+export const SectionResults = styled.section`
   width: 100%;
   margin: 0 auto;
-
   display: grid;
   grid-template-columns: repeat(auto-fill, 7rem);
   gap: 1.25rem;
