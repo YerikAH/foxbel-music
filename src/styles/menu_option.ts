@@ -8,10 +8,12 @@ export const NavigationMenu = styled.nav`
   left: 0;
   top: 0;
   background-color: var(--dark-red);
+  overflow: auto;
 `
 export const MenuBoxUl = styled.div`
   display: grid;
   gap: 1.875rem;
+  margin-top: 1.8rem;
 `
 export const ImageLogo = styled.img``
 export const MenuLinkTitle = styled.h5`
@@ -28,6 +30,16 @@ export const MenuList = styled.li`
 export const MenuListLink = styled.a`
   width: 100%;
   font: normal normal 400 1rem/2rem var(--font-principal);
-  color: var(--white);
+  color: ${(props) => (props.className === 'true' ? 'var(--red-principal)' : 'var(--white)')};
+  font-weight: ${(props) => (props.className === 'true' ? '700' : '400')};
   display: flex;
+  &::before {
+    content: '';
+    height: 100%;
+    position: relative;
+    background: ${(props) => (props.className === 'true' ? 'var(--red-principal)' : 'transparent')};;
+    width: 5px;
+    height: auto;
+    left: -2.5rem;
+  }
 `
