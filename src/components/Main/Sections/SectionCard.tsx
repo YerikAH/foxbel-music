@@ -14,6 +14,7 @@ const SectionCard = () => {
             autor={item.artist.name}
             title={item.title_short}
             url={item.album.cover_big}
+            id={item.id}
           />
         ))}
       </style.SectionResults>

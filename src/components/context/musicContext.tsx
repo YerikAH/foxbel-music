@@ -13,8 +13,8 @@ const MusicProvider = ({ children }: ContextProps) => {
   const handleBackMusic = () => setIndexMusic(indexMusic - 1)
   const handleNewMusic = (id: number) => setMusicId(id)
 
-  
   useEffect(() => {
+    console.log('ESto debería de ejecutarse')
     const generalMusic: RootMusic = {
       currentIndex: indexMusic,
       id: musicId,
@@ -23,9 +23,8 @@ const MusicProvider = ({ children }: ContextProps) => {
       handleNextMusix: handleNextMusic,
     }
     setData(generalMusic)
-    
+    console.log(musicId)
   }, [indexMusic, musicId])
-  
 
   return <MusicContext.Provider value={data}>{children}</MusicContext.Provider>
 }

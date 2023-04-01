@@ -52,3 +52,9 @@ export const HeadlinePrincipal = styled.h2`
     margin: 2.5rem auto 1.2rem auto;
   }
 `
+export const IframeDezzer = styled.div`
+  width: 100%;
+  max-width: 880px;
+  margin: 0 auto;
+
+`

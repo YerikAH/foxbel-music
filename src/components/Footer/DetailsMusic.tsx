@@ -2,7 +2,7 @@ import { DetailsMusicProps } from '../../interface/props'
 import * as style from '../../styles/player_music'
 import placeImage from '../../assets/foxbel-music-white-icon@2x.png'
 const DetailsMusic = ({ data }: DetailsMusicProps) => {
-  const {artist, title, album} = data?.[0] || {}
+  const {artist, title, album} = data || {}
   return (
     <style.DetailMusic>
       <style.ImageMusic
