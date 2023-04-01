@@ -27,7 +27,10 @@ export const ImageMusic = styled.img`
   object-fit: cover;
 `
 export const DescriptionMusic = styled.div`
-  display: grid;
+  display: none;
+  @media (min-width: 850px) {
+    display: grid;
+  }
 `
 export const TitleMusic = styled.h2`
   font: normal normal 700 0.9rem/1.2rem var(--font-principal);
@@ -63,11 +66,15 @@ export const BoxVolumen = styled.div`
 export const IconVolumen = styled.img``
 export const SliceVolumen = styled.input`
   -webkit-appearance: none;
-  width: 100%;
   height: 20px;
   background: transparent;
   margin: 10px 0;
   width: 100px;
+  rotate: 90deg;
+  display: none;
+  @media (min-width: 850px) {
+    rotate: 0deg;
+  }
   &:focus {
     outline: none;
   }
