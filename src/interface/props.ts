@@ -1,3 +1,5 @@
+import { Daum } from './chart';
+
 export interface CardResultProps {
     title: string,
     autor: string,
@@ -5,4 +7,8 @@ export interface CardResultProps {
 }
 export interface ContextProps {
     children: JSX.Element,
+}
+
+export interface DetailsMusicProps{
+    data: Daum[] | undefined
 }

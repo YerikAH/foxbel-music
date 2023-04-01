@@ -4,8 +4,9 @@ declare const DZ: any // Dezzer SDK
 
 /* interface and init state */
 import { ContextProps } from '../../interface/props'
-import { Root, RootGeneral } from '../../interface/chart'
+import { Root } from '../../interface/chart'
 import { CONTEXT_INIT } from '../constant/context'
+import { RootGeneral } from '../../interface/context'
 
 const FetchContext = createContext<RootGeneral>(CONTEXT_INIT)
 

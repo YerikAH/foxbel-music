@@ -1,15 +1,17 @@
+import { DetailsMusicProps } from '../../interface/props'
 import * as style from '../../styles/player_music'
-const DetailsMusic = () => {
+import placeImage from '../../assets/foxbel-music-white-icon@2x.png'
+const DetailsMusic = ({ data }: DetailsMusicProps) => {
+  const {artist, title, album} = data?.[0] || {}
   return (
     <style.DetailMusic>
       <style.ImageMusic
-        src='https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/62/82/a5/6282a515-c95c-9e5e-3eef-4ef7b75639ca/191404113868.png/1200x1200bf-60.jpg'
+        src={album?.cover_big ?? placeImage}
         alt='music'
       />
       <style.DescriptionMusic>
-        <style.TitleMusic>Canción</style.TitleMusic>
-        <style.AutorMusic>Artista - Albúm</style.AutorMusic>
-        <audio src=""></audio>
+        <style.TitleMusic>{title ?? 'Error'}</style.TitleMusic>
+        <style.AutorMusic>{artist?.name ?? 'Error'}</style.AutorMusic>
       </style.DescriptionMusic>
     </style.DetailMusic>
   )
