@@ -1,7 +1,6 @@
-import React from 'react'
-import * as style from '../styles/navigation_main'
-import IconSearch from './icons/IconSearch'
-import IconUser from './icons/IconUser'
+import * as style from '../../../styles/navigation_main'
+import IconSearch from '../../icons/IconSearch'
+import IconUser from '../../icons/IconUser'
 
 const NavigationMain = () => {
   return (

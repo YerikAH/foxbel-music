@@ -8,7 +8,7 @@ export const MainStyle = styled.main`
   }
 `
 
-export const SimulationMenuOption = styled.div`
+export const SimulationMenuOption = styled.section`
   width: 20.625rem;
   display: none;
   @media (min-width: 850px) {
@@ -16,7 +16,7 @@ export const SimulationMenuOption = styled.div`
   }
 `
 
-export const SectionBox = styled.div`
+export const SectionBox = styled.article`
   padding: 0 0.5rem 125px 0.5rem;
   overflow: auto;
   height: 100vh;

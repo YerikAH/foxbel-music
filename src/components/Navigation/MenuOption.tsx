@@ -1,5 +1,5 @@
-import * as style from '../styles/menu_option'
-import logo from '../assets/foxbel-music.png'
+import * as style from '../../styles/menu_option'
+import logo from '../../assets/foxbel-music.png'
 const MenuOption = () => {
   const linkLibrary = [
     {

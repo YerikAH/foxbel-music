@@ -1,5 +1,5 @@
-import * as style from '../styles/banner'
-import IconVerticalDots from './icons/IconVerticalDots'
+import * as style from '../../../styles/banner'
+import IconVerticalDots from '../../icons/IconVerticalDots'
 
 const Banner = () => (
   <style.SectionBanner>

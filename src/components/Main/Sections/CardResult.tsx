@@ -1,7 +1,7 @@
-import { CardResultProps } from '../interface/props'
-import * as style from '../styles/card_result'
-import IconDots from './icons/IconDots'
-import IconPlay from './icons/IconPlay'
+import { CardResultProps } from '../../../interface/props'
+import * as style from '../../../styles/card_result'
+import IconDots from '../../icons/IconDots'
+import IconPlay from '../../icons/IconPlay'
 
 const CardResult = ({ autor, title, url}:CardResultProps) => {
   return (

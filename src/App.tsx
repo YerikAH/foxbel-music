@@ -1,14 +1,17 @@
-import Main from './components/Main'
-import MenuOption from './components/MenuOption'
-import PlayerMusic from './components/PlayerMusic'
+import Main from './components/Main/Main'
+import MenuOption from './components/Navigation/MenuOption'
+import PlayerMusic from './components/Footer/PlayerMusic'
+import { FetchProvider } from './components/context/fetchContext'
 
 const App = () => {
   return (
-    <>
-      <MenuOption />
-      <Main />
-      <PlayerMusic />
-    </>
+    <FetchProvider>
+      <>
+        <MenuOption />
+        <Main />
+        <PlayerMusic />
+      </>
+    </FetchProvider>
   )
 }
 export default App
