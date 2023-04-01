@@ -1,8 +1,22 @@
+import { useEffect, useState } from 'react'
 import * as style from '../styles/main'
 import Banner from './Banner'
 import CardResult from './CardResult'
 import NavigationMain from './NavigationMain'
+import { SEARCH_CONST } from './constant/constant'
+import { useFetch } from '../hook/useFetch'
+import { Root } from '../interface/search'
+
 const Main = () => {
+  const [data, setData] = useState<unknown>()
+  const { dataJson, load } = useFetch()
+
+  useEffect(() => {
+    if (dataJson !== null) {
+      setData(dataJson)
+      console.log(dataJson)
+    }
+  }, [load])
   return (
     <style.MainStyle>
       <style.SimulationMenuOption></style.SimulationMenuOption>
@@ -11,19 +25,14 @@ const Main = () => {
         <Banner />
         <style.HeadlinePrincipal>Resultados</style.HeadlinePrincipal>
         <style.SectionResults>
-          <CardResult
-            autor='Adelete'
-            title='My heart break'
-            url='https://www.clarin.com/img/2022/02/09/la-britanica-adele-laurie-blue___IzHX7Z2O0_1256x620__1.jpg'
-          />
-          <CardResult autor='Adelete' title='My heart break' />
-          <CardResult autor='Adelete' title='My heart break' />
-          <CardResult autor='Adelete' title='My heart break' />
-          <CardResult autor='Adelete' title='My heart break' />
-          <CardResult autor='Adelete' title='My heart break' />
-          <CardResult autor='Adelete' title='My heart break' />
-          <CardResult autor='Adelete' title='My heart break' />
-          <CardResult autor='Adelete' title='My heart break' />
+          {/* {data.data.map((item) => (
+            <CardResult
+              autor={item.artist.name}
+              title={item.title}
+              key={item.id}
+              url={item.album.cover}
+            />
+          ))} */}
         </style.SectionResults>
       </style.SectionBox>
     </style.MainStyle>
