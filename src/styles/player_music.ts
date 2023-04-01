@@ -21,10 +21,13 @@ export const DetailMusic = styled.div`
   align-items: center;
 `
 export const ImageMusic = styled.img`
+  max-width: 3.25rem;
   width: 100%;
-  height: 100%;
-  max-width: 6.25rem;
   object-fit: cover;
+  height: 100%;
+  @media (min-width: 850px) {
+    max-width: 6.25rem;
+  }
 `
 export const DescriptionMusic = styled.div`
   display: none;
@@ -45,12 +48,19 @@ export const PlayerButtons = styled.div`
   display: flex;
   place-items: center;
   gap: 1.2rem;
+  padding: 0.5rem 0;
+  @media (min-width: 850px) {
+    padding: 0;
+  }
 `
 export const ButtonPlay = styled.button`
   border: none;
   border-radius: 15rem;
   background: var(--light-red-two);
-  padding: 1.2rem;
+  padding: 0.5rem;
+  @media (min-width: 850px) {
+    padding: 1.2rem;
+  }
 `
 export const ButtonOption = styled.button`
   border: none;
@@ -63,7 +73,12 @@ export const BoxVolumen = styled.div`
   place-items: center;
   gap: 2.5rem;
 `
-export const IconVolumen = styled.img``
+export const IconVolumen = styled.div`
+  scale: 1;
+  @media (min-width: 850px) {
+    scale: 1.5;
+  }
+`
 export const SliceVolumen = styled.input`
   -webkit-appearance: none;
   height: 20px;
@@ -74,6 +89,7 @@ export const SliceVolumen = styled.input`
   display: none;
   @media (min-width: 850px) {
     rotate: 0deg;
+    display: block;
   }
   &:focus {
     outline: none;

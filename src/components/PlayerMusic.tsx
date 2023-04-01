@@ -30,7 +30,9 @@ const PlayerMusic = () => {
         </style.PlayerButtons>
         <style.BoxVolumen>
           <style.SliceVolumen type='range' />
-          <IconVolume />
+          <style.IconVolumen>
+            <IconVolume />
+          </style.IconVolumen>
         </style.BoxVolumen>
       </style.MusicStyleContent>
     </style.PlayerMusicStyle>

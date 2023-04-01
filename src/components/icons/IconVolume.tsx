@@ -11,7 +11,6 @@ const IconVolume = () => {
       fill='none'
       strokeLinecap='round'
       strokeLinejoin='round'
-      transform='scale(1.5)'
     >
       <path stroke='none' d='M0 0h24v24H0z' fill='none'></path>
       <path d='M15 8a5 5 0 0 1 0 8'></path>

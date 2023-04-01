@@ -1,11 +1,13 @@
 import * as style from '../styles/main'
 import Banner from './Banner'
 import CardResult from './CardResult'
+import NavigationMain from './NavigationMain'
 const Main = () => {
   return (
     <style.MainStyle>
       <style.SimulationMenuOption></style.SimulationMenuOption>
       <style.SectionBox>
+        <NavigationMain />
         <Banner />
         <style.HeadlinePrincipal>Resultados</style.HeadlinePrincipal>
         <style.SectionResults>

@@ -8,8 +8,9 @@ const IconUser = () => {
       y='0px'
       viewBox='0 0 512 512'
       xmlSpace='preserve'
-      width='30'
-      height='30'
+      width='16'
+      height='16'
+      fill='#E86060'
     >
       <g>
         <circle cx='256' cy='128' r='128' />

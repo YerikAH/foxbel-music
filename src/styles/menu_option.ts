@@ -4,13 +4,13 @@ export const NavigationMenu = styled.nav`
   position: fixed;
   width: 20.625rem;
   height: 100vh;
-  padding: 3.125rem 2.5rem;
+  padding: 3.125rem 2.5rem 10rem 2.5rem;
   left: 0;
   top: 0;
   background-color: var(--dark-red);
   overflow: auto;
   display: none;
-  @media (min-width:850px){
+  @media (min-width: 850px) {
     display: block;
   }
 `
@@ -41,7 +41,7 @@ export const MenuListLink = styled.a`
     content: '';
     height: 100%;
     position: relative;
-    background: ${(props) => (props.className === 'true' ? 'var(--red-principal)' : 'transparent')};;
+    background: ${(props) => (props.className === 'true' ? 'var(--red-principal)' : 'transparent')};
     width: 5px;
     height: auto;
     left: -2.5rem;

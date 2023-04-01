@@ -17,7 +17,7 @@ export const SimulationMenuOption = styled.div`
 `
 
 export const SectionBox = styled.div`
-  padding: 0 0.5rem;
+  padding: 0 0.5rem 125px 0.5rem;
   overflow: auto;
   height: 100vh;
   @media (min-width: 850px) {
