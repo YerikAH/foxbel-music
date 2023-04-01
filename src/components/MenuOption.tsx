@@ -29,18 +29,20 @@ const MenuOption = () => {
         <style.ImageLogo src={logo} alt='logo' />
       </style.MenuListLink>
       <style.MenuBoxUl>
-          <style.MenuUl>
-            <style.MenuLinkTitle>Mi Librería</style.MenuLinkTitle>
-            {linkLibrary.map((item, idx) => (
-              <style.MenuList key={idx}>
-                <style.MenuListLink className={`${item.value}`} tabIndex={1}>{item.name}</style.MenuListLink>
-              </style.MenuList>
-            ))}
-          </style.MenuUl>
-          <style.MenuUl>
-            <style.MenuLinkTitle>Mi Librería</style.MenuLinkTitle>
-          </style.MenuUl>
-        </style.MenuBoxUl>
+        <style.MenuUl>
+          <style.MenuLinkTitle>Mi Librería</style.MenuLinkTitle>
+          {linkLibrary.map((item, idx) => (
+            <style.MenuList key={idx}>
+              <style.MenuListLink className={`${item.value}`} tabIndex={1}>
+                {item.name}
+              </style.MenuListLink>
+            </style.MenuList>
+          ))}
+        </style.MenuUl>
+        <style.MenuUl>
+          <style.MenuLinkTitle>Playlist</style.MenuLinkTitle>
+        </style.MenuUl>
+      </style.MenuBoxUl>
     </style.NavigationMenu>
   )
 }

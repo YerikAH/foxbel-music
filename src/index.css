@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
 
 /* variables */
-:root{
-  --font-principal : 'Quicksand', sans-serif;
+:root {
+  --font-principal: 'Quicksand', sans-serif;
   --dark-red: #662323;
-  --dark-red-50: #A70000B2;
-  --light-red: #EB5757;
-  --red-principal: #E86060;
+  --dark-red-50: #a70000b2;
+  --light-red: #eb5757;
+  --red-principal: #e86060;
   --black-100: #555555;
   --black-70: #828282;
-  --white: #FFF;
+  --white: #fff;
 }
 
 /* reset css*/
@@ -23,7 +23,9 @@
   font-family: var(--font-principal);
 }
 
-
+html {
+  overflow-x: hidden;
+}
 
 html,
 body {
@@ -50,11 +52,12 @@ select {
   font: inherit;
 }
 
-li{
+li {
   list-style: none;
 }
 
-a, button{
+a,
+button {
   text-decoration: none;
-  cursor:pointer
+  cursor: pointer;
 }

@@ -16,7 +16,12 @@ export const SimulationMenuOption = styled.div`
   }
 `
 
-export const SectionBox = styled.div``
+export const SectionBox = styled.div`
+  padding: 0 0.5rem;
+  @media (min-width: 850px) {
+    padding: 0 2.5rem;
+  }
+`
 export const SectionResults = styled.section`
   width: 100%;
   margin: 0 auto;
@@ -39,8 +44,9 @@ export const HeadlinePrincipal = styled.h2`
   color: var(--red-principal);
   width: 100%;
   margin-bottom: 1.2rem;
+  margin-top: 2.5rem;
   @media (min-width: 1260px) {
     max-width: 880px;
-    margin: 0 auto 1.2rem auto;
+    margin: 2.5rem auto 1.2rem auto;
   }
 `

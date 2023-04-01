@@ -6,7 +6,7 @@ const Main = () => {
     <style.MainStyle>
       <style.SimulationMenuOption></style.SimulationMenuOption>
       <style.SectionBox>
-        <Banner/>
+        <Banner />
         <style.HeadlinePrincipal>Resultados</style.HeadlinePrincipal>
         <style.SectionResults>
           <CardResult
