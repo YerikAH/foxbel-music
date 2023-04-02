@@ -26,7 +26,7 @@ const SectionsMain = () => {
             ></iframe>
           </style.IframeDezzer>
         )}
-        <style.HeadlinePrincipal>Resultados</style.HeadlinePrincipal>
+        <style.HeadlinePrincipal>Recientes</style.HeadlinePrincipal>
         <SectionCard />
       </style.SectionBox>
     </MusicContext.Provider>

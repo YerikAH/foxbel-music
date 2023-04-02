@@ -11,7 +11,6 @@ const NavigationMain = () => {
   const [searchTerm, setSearchTerm] = useState('')
   const { dataReturn, loading } = useSearch(searchTerm)
   const [data, setData] = useState<RootSearch | null>(null)
-
   function handleChange(event: React.ChangeEvent<HTMLInputElement>) {
     const value = event.target.value
     setSearchTerm(value)

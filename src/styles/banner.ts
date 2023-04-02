@@ -14,8 +14,23 @@ export const BoxImageResponsive = styled.div`
   max-width: 250px;
   height: 100%;
   display: none;
+  position: relative;
+  overflow: hidden;
   @media (min-width: 850px) {
     display: block;
+  }
+`
+export const ButtonIconPlayer = styled.button`
+  background: transparent;
+  border: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  & svg {
+    scale: 5;
   }
 `
 export const ImageAutor = styled.img`

@@ -6,6 +6,7 @@ export const NavigationMainStyle = styled.nav`
   max-width: 880px;
   width: 100%;
   margin: 2rem auto 2.5rem auto;
+  gap: 1rem;
 `
 export const SearchInput = styled.input`
   font: normal normal 400 1.15rem/1.22rem var(--font-principal);
@@ -35,7 +36,7 @@ export const SearchResultsBox = styled.div`
   -moz-box-shadow: 2px 10px 5px 0px rgba(0, 0, 0, 0.15);
   z-index: 300;
   height: 18.75rem;
-overflow: auto;
+  overflow: auto;
 `
 export const NotFoundStyles = styled.div`
   display: grid;
@@ -71,6 +72,13 @@ export const IconProfile = styled.button`
 export const TextProfile = styled.p`
   font: normal normal 400 1rem/1.5rem var(--font-principal);
   color: var(--gray);
+  display: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  @media (min-width: 850px) {
+    display: block;
+  }
 `
 export const ResultStyle = styled.button`
   background: transparent;
@@ -79,7 +87,7 @@ export const ResultStyle = styled.button`
   place-items: start;
   gap: 0.5rem;
   width: 100%;
-  &:hover{
+  &:hover {
     background: #00000010;
   }
 `
@@ -94,11 +102,11 @@ export const ResultStyleDetail = styled.div`
 `
 export const ResultStyleTitle = styled.h6`
   font: normal normal 600 0.9rem/1.1rem var(--font-principal);
-  color :var(--black-100) ;
+  color: var(--black-100);
   text-align: left;
 `
 export const ResultStyleAutor = styled.p`
   font: normal normal 400 0.75rem/1.1rem var(--font-principal);
-  color :var(--gray) ;
-    text-align: left;
+  color: var(--gray);
+  text-align: left;
 `

@@ -72,6 +72,7 @@ export const BoxVolumen = styled.div`
   display: flex;
   place-items: center;
   gap: 2.5rem;
+  margin-right: 2rem;
 `
 export const IconVolumen = styled.div`
   scale: 1;
