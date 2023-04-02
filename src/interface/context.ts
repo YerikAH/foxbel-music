@@ -1,4 +1,4 @@
-import { Root } from './chart'
+import { Daum, Root } from './chart'
 
 export interface RootGeneral {
   root: Root | null
@@ -7,8 +7,8 @@ export interface RootGeneral {
 
 export interface RootMusic {
   currentIndex: number
-  id: number
+  data: Daum | null
   handleNextMusix(): void
   handleBackMusic():void
-  handleNewMusic(id:number):void
+  handleMusicNew(dataProp: Daum): void
 }

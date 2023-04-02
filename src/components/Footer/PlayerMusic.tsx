@@ -8,22 +8,21 @@ import MusicContext from '../../context/musicContext'
 import { Daum } from '../../interface/chart'
 
 const PlayerMusic = () => {
-  const [musicSelect, setMusicSelect] = useState<Daum>()
+  const [musicSelect, setMusicSelect] = useState<Daum | null>(null)
   const fetchContext = useContext(FetchContext)
   const musicContext = useContext(MusicContext)
-  const [volume, setVolume] = useState(50)
+  const [volume, setVolume] = useState(75)
   function handleVolume(vol: number){
     setVolume(vol)
   }
   useEffect(() => {
-    console.log(musicContext.id)
-    const music = fetchContext.root?.tracks.data.find((item) => item.id === musicContext.id)
-    setMusicSelect(music)
-  }, [musicContext.id])
+    
+    setMusicSelect(musicContext.data)
+  }, [musicContext.data])
   return (
     <MusicContext.Provider value={musicContext}>
       <FetchContext.Provider value={fetchContext}>
-        {musicContext.id !== 0 && (
+        {musicContext.data !== null && (
           <style.PlayerMusicStyle>
             <style.MusicStyleContent>
               <DetailsMusic data={musicSelect} />

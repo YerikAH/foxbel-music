@@ -2,17 +2,14 @@ import { Daum } from './chart';
 import { RootSearch } from './search';
 
 export interface CardResultProps {
-    title: string,
-    autor: string,
-    url?: string,
-    id: number
+    data: Daum,
 }
 export interface ContextProps {
     children: JSX.Element,
 }
 
 export interface DetailsMusicProps{
-    data: Daum | undefined
+    data: Daum | undefined | null
     volume?: number
 }
 export interface VolumeMusicProps{

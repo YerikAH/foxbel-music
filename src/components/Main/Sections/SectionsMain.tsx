@@ -6,12 +6,11 @@ import SectionCard from './SectionCard'
 import MusicContext from '../../../context/musicContext'
 const SectionsMain = () => {
   const musicContext = useContext(MusicContext)
-  console.log(musicContext.id)
   return (
     <MusicContext.Provider value={musicContext}>
       <style.SectionBox>
         <NavigationMain />
-        {musicContext.id !== 0 ? (
+        {musicContext.data !== null ? (
           <Banner />
         ) : (
           <style.IframeDezzer>

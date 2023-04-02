@@ -7,14 +7,12 @@ import FetchContext from '../../../context/fetchContext'
 import { Daum } from '../../../interface/chart'
 
 const Banner = () => {
-  const [musicSelect, setMusicSelect] = useState<Daum >()
+  const [musicSelect, setMusicSelect] = useState<Daum|null >(null)
   const musicContext = useContext(MusicContext)
   const fetchContext = useContext(FetchContext)
   useEffect(() => {
-    console.log(musicContext.id)
-    const music = fetchContext.root?.tracks.data.find((item) => item.id === musicContext.id)
-    setMusicSelect(music)
-  }, [musicContext.id])
+    setMusicSelect(musicContext.data)
+  }, [musicContext.data])
   return (
     <FetchContext.Provider value={fetchContext}>
       <MusicContext.Provider value={musicContext}>

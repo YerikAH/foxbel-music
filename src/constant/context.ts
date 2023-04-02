@@ -7,15 +7,16 @@ export const CONTEXT_INIT: RootGeneral = {
 }
 export const CONTEXT_MUSIC_INIT: RootMusic = {
   currentIndex: 0,
-  id: 0,
+  data: null,
   handleBackMusic() {
-    return 
-  },
-  handleNewMusic() {
     return 
   },
   handleNextMusix(){
     return
+  },
+  handleMusicNew(){
+    return
   }
+  
 
 }
