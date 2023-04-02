@@ -21,7 +21,8 @@ const SectionsMain = () => {
               width='100%'
               height='300'
               frameBorder='0'
-              allowTransparency='true'
+              // eslint-disable-next-line react/no-unknown-property
+              allowTransparency={true}
               allow='encrypted-media; clipboard-write'
             ></iframe>
           </style.IframeDezzer>

@@ -11,6 +11,10 @@ const PlayerMusic = () => {
   const [musicSelect, setMusicSelect] = useState<Daum>()
   const fetchContext = useContext(FetchContext)
   const musicContext = useContext(MusicContext)
+  const [volume, setVolume] = useState(50)
+  function handleVolume(vol: number){
+    setVolume(vol)
+  }
   useEffect(() => {
     console.log(musicContext.id)
     const music = fetchContext.root?.tracks.data.find((item) => item.id === musicContext.id)
@@ -23,8 +27,8 @@ const PlayerMusic = () => {
           <style.PlayerMusicStyle>
             <style.MusicStyleContent>
               <DetailsMusic data={musicSelect} />
-              <ButtonsPlayer data={musicSelect} />
-              <VolumenSettings />
+              <ButtonsPlayer data={musicSelect} volume={volume}/>
+              <VolumenSettings volume={volume} handleVolume={handleVolume}/>
             </style.MusicStyleContent>
           </style.PlayerMusicStyle>
         )}

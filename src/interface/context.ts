@@ -4,6 +4,7 @@ export interface RootGeneral {
   root: Root | null
   loader: boolean
 }
+
 export interface RootMusic {
   currentIndex: number
   id: number

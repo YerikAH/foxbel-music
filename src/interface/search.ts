@@ -1,4 +1,4 @@
-export interface Root {
+export interface RootSearch {
   data: Daum[]
   total: number
   prev: string
