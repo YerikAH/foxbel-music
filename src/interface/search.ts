@@ -7,7 +7,7 @@ export interface RootSearch {
 
 export interface Daum {
   id: number
-  readable: boolean
+  readable?: boolean
   title: string
   title_short: string
   title_version?: string
@@ -22,6 +22,7 @@ export interface Daum {
   artist: Artist
   album: Album
   type: string
+  position?: number
 }
 
 export interface Artist {
@@ -34,6 +35,7 @@ export interface Artist {
   picture_big: string
   picture_xl: string
   tracklist: string
+  radio?: boolean
   type: string
 }
 

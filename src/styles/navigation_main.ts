@@ -30,7 +30,6 @@ export const SearchResultsBox = styled.div`
   margin-top: 4rem;
   background: var(--white);
   border-radius: 1rem;
-  padding: 2rem;
   box-shadow: 2px 10px 5px 0px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 2px 10px 5px 0px rgba(0, 0, 0, 0.15);
   -moz-box-shadow: 2px 10px 5px 0px rgba(0, 0, 0, 0.15);
@@ -80,6 +79,9 @@ export const ResultStyle = styled.button`
   place-items: start;
   gap: 0.5rem;
   width: 100%;
+  &:hover{
+    background: #00000010;
+  }
 `
 export const ResultStyleImage = styled.img`
   width: 2.5rem;

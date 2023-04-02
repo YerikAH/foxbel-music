@@ -16,8 +16,9 @@ export interface Root {
   export interface Daum {
     id: number
     title: string
+    readable?:boolean
     title_short: string
-    title_version: string
+    title_version?: string
     link: string
     duration: number
     rank: number
@@ -26,7 +27,7 @@ export interface Root {
     explicit_content_cover: number
     preview: string
     md5_image: string
-    position: number
+    position?: number
     artist: Artist
     album: Album
     type: string
@@ -41,7 +42,7 @@ export interface Root {
     picture_medium: string
     picture_big: string
     picture_xl: string
-    radio: boolean
+    radio?: boolean
     tracklist: string
     type: string
   }

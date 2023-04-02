@@ -19,7 +19,9 @@ const NavigationMain = () => {
     setData(dataReturn)
   }
   function handleBlur(){
-    // setIsType(!isType)
+    setTimeout(() => {
+      setIsType(!isType);
+    }, 3000);
   }
 
   useEffect(() => {
@@ -28,7 +30,7 @@ const NavigationMain = () => {
       if (searchTerm === activeElement.value) {
         setIsType(false)
       }
-    }, 10000)
+    }, 5000)
     return () => clearInterval(interval)
   }, [searchTerm])
   return (

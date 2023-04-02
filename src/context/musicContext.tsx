@@ -20,10 +20,9 @@ const MusicProvider = ({ children }: ContextProps) => {
       data: dataMusic,
       handleBackMusic: handleBackMusic,
       handleNextMusix: handleNextMusic,
-      handleMusicNew: handleMusicNew
+      handleMusicNew: handleMusicNew,
     }
     setData(generalMusic)
-
   }, [indexMusic, dataMusic])
 
   return <MusicContext.Provider value={data}>{children}</MusicContext.Provider>

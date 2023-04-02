@@ -5,7 +5,7 @@ import ButtonsPlayer from './ButtonsPlayer'
 import DetailsMusic from './DetailsMusic'
 import VolumenSettings from './VolumenSettings'
 import MusicContext from '../../context/musicContext'
-import { Daum } from '../../interface/chart'
+import { Daum } from '../../interface/search'
 
 const PlayerMusic = () => {
   const [musicSelect, setMusicSelect] = useState<Daum | null>(null)
@@ -16,7 +16,6 @@ const PlayerMusic = () => {
     setVolume(vol)
   }
   useEffect(() => {
-    
     setMusicSelect(musicContext.data)
   }, [musicContext.data])
   return (
