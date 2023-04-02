@@ -1,7 +1,4 @@
-export interface RootGeneral {
-    root: Root | null,
-    loader: boolean
-}
+
 
 export interface Root {
     tracks: Tracks

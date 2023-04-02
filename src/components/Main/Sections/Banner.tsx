@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from 'react'
 import * as style from '../../../styles/banner'
-import MusicContext from '../../context/musicContext'
+import MusicContext from '../../../context/musicContext'
 import BannerAutor from './BannerAutor'
 import BannerInfo from './BannerInfo'
-import FetchContext from '../../context/fetchContext'
+import FetchContext from '../../../context/fetchContext'
 import { Daum } from '../../../interface/chart'
 
 const Banner = () => {

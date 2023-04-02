@@ -1,4 +1,5 @@
 import { Daum } from './chart';
+import { RootSearch } from './search';
 
 export interface CardResultProps {
     title: string,
@@ -17,4 +18,8 @@ export interface DetailsMusicProps{
 export interface VolumeMusicProps{
     handleVolume(vol: number): void
     volume: number
+}
+export interface SearchProps{
+    data:RootSearch | null
+    loader: boolean
 }

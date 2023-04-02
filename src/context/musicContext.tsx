@@ -1,6 +1,6 @@
 import { createContext, useEffect, useState } from 'react'
-import { ContextProps } from '../../interface/props'
-import { RootMusic } from '../../interface/context'
+import { ContextProps } from '../interface/props'
+import { RootMusic } from '../interface/context'
 import { CONTEXT_MUSIC_INIT } from '../constant/context'
 
 const MusicContext = createContext<RootMusic>(CONTEXT_MUSIC_INIT)
@@ -14,7 +14,6 @@ const MusicProvider = ({ children }: ContextProps) => {
   const handleNewMusic = (id: number) => setMusicId(id)
 
   useEffect(() => {
-    console.log('ESto debería de ejecutarse')
     const generalMusic: RootMusic = {
       currentIndex: indexMusic,
       id: musicId,

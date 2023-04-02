@@ -1,4 +1,4 @@
-import { RootGeneral, RootMusic } from '../../interface/context'
+import { RootGeneral, RootMusic } from '../interface/context'
 import { CHART_INIT } from './chart'
 
 export const CONTEXT_INIT: RootGeneral = {

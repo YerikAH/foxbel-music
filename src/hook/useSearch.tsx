@@ -29,7 +29,7 @@ function useSearch(query: string) {
   }
   useEffect(() => {
     fetchData(query)
-  }, [])
+  }, [query])
   useEffect(() => {
     if (data !== null) {
       setDataReturn(data)

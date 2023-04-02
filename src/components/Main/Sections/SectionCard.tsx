@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import * as style from '../../../styles/main'
-import FetchContext from '../../context/fetchContext'
+import FetchContext from '../../../context/fetchContext'
 import CardResult from './CardResult'
 
 const SectionCard = () => {

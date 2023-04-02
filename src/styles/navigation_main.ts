@@ -27,16 +27,30 @@ export const SearchStyles = styled.div`
 export const SearchResultsBox = styled.div`
   position: absolute;
   width: 100%;
-  height:20px;
+  margin-top: 4rem;
   background: var(--white);
   border-radius: 1rem;
-  bottom: -5rem;
   padding: 2rem;
-  box-shadow: 2px 10px 5px 0px rgba(0,0,0,0.15);
--webkit-box-shadow: 2px 10px 5px 0px rgba(0,0,0,0.15);
--moz-box-shadow: 2px 10px 5px 0px rgba(0,0,0,0.15);
-  z-index: 300
-  
+  box-shadow: 2px 10px 5px 0px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 2px 10px 5px 0px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 2px 10px 5px 0px rgba(0, 0, 0, 0.15);
+  z-index: 300;
+  height: 18.75rem;
+overflow: auto;
+`
+export const NotFoundStyles = styled.div`
+  display: grid;
+  place-items: center;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+`
+export const TextNotFound = styled.p`
+  font: normal normal 700 1rem/1.5rem var(--font-principal);
+  color: var(--soft-gray);
+  text-align: center;
+  margin-top: 1rem;
+  max-width: 20rem;
 `
 export const IconField = styled.div`
   position: absolute;
@@ -58,4 +72,31 @@ export const IconProfile = styled.button`
 export const TextProfile = styled.p`
   font: normal normal 400 1rem/1.5rem var(--font-principal);
   color: var(--gray);
+`
+export const ResultStyle = styled.button`
+  background: transparent;
+  border: none;
+  display: flex;
+  place-items: start;
+  gap: 0.5rem;
+  width: 100%;
+`
+export const ResultStyleImage = styled.img`
+  width: 2.5rem;
+  height: 2.5rem;
+  object-fit: cover;
+`
+export const ResultStyleDetail = styled.div`
+  display: grid;
+  place-items: start;
+`
+export const ResultStyleTitle = styled.h6`
+  font: normal normal 600 0.9rem/1.1rem var(--font-principal);
+  color :var(--black-100) ;
+  text-align: left;
+`
+export const ResultStyleAutor = styled.p`
+  font: normal normal 400 0.75rem/1.1rem var(--font-principal);
+  color :var(--gray) ;
+    text-align: left;
 `

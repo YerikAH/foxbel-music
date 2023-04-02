@@ -3,7 +3,7 @@ import * as style from '../../../styles/main'
 import Banner from './Banner'
 import NavigationMain from './NavigationMain'
 import SectionCard from './SectionCard'
-import MusicContext from '../../context/musicContext'
+import MusicContext from '../../../context/musicContext'
 const SectionsMain = () => {
   const musicContext = useContext(MusicContext)
   console.log(musicContext.id)

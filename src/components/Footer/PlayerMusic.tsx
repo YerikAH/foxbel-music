@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from 'react'
 import * as style from '../../styles/player_music'
-import FetchContext from '../context/fetchContext'
+import FetchContext from '../../context/fetchContext'
 import ButtonsPlayer from './ButtonsPlayer'
 import DetailsMusic from './DetailsMusic'
 import VolumenSettings from './VolumenSettings'
-import MusicContext from '../context/musicContext'
+import MusicContext from '../../context/musicContext'
 import { Daum } from '../../interface/chart'
 
 const PlayerMusic = () => {

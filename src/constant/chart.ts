@@ -1,4 +1,4 @@
-import { Root } from '../../interface/chart';
+import { Root } from '../interface/chart';
 
 export const CHART_INIT : Root= {
     albums:{
