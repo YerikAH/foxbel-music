@@ -14,7 +14,7 @@ const CardResult = ({ data }: CardResultProps) => {
   return (
     <MusicContext.Provider value={musicContext}>
       <style.CardResult>
-        <style.BoxImage className={data.album.cover_big}>
+        <style.BoxImage className={data.album?.cover_big}>
           <style.BoxImageButton onClick={()=>handleClick(data)}>
             <IconPlay />
           </style.BoxImageButton>

@@ -3,6 +3,7 @@ import { Daum, Root } from './chart'
 export interface RootGeneral {
   root: Root | null
   loader: boolean
+  handleContext(): void
 }
 
 export interface RootMusic {

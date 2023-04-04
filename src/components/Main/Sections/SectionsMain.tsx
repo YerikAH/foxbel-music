@@ -1,17 +1,25 @@
-import { useContext, useEffect } from 'react'
+import { useContext } from 'react'
 import * as style from '../../../styles/main'
 import Banner from './Banner'
 import NavigationMain from './NavigationMain'
 import SectionCard from './SectionCard'
 import MusicContext from '../../../context/musicContext'
 import WidgetDeezer from './WidgetDeezer'
+import FetchContext from '../../../context/fetchContext'
 const SectionsMain = () => {
   const musicContext = useContext(MusicContext)
+  const fetchContext = useContext(FetchContext)
   const handleScroll = (e:React.UIEvent<HTMLElement, UIEvent>) => {
     console.log('El usuario está moviendo el scroll');
     const elementScroll = e.target as HTMLDivElement
-    console.log(elementScroll.scrollTop)
-    console.log('el alto', elementScroll.scrollHeight - elementScroll.clientHeight)
+    const moveScroll = elementScroll.scrollTop
+    const maxScroll = elementScroll.scrollHeight - elementScroll.clientHeight
+    console.log(maxScroll, moveScroll)
+    if(moveScroll > maxScroll - 100){
+      console.log('Nueva peticion')
+      fetchContext.handleContext()
+      console.log(fetchContext.root)
+    }
     // Aquí puedes hacer lo que necesites cuando se detecte que el usuario está moviendo el scroll
   };
   
