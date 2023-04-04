@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const NavigationMainStyle = styled.nav`
+export const NavigationMainStyle = styled.section`
   display: flex;
   justify-content: space-between;
   max-width: 880px;

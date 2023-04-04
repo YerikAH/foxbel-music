@@ -9,11 +9,7 @@ const SectionCard = () => {
     <FetchContext.Provider value={fetchContext}>
       <style.SectionResults>
         {fetchContext.root?.tracks.data.map((item) => (
-          <CardResult
-            key={item.id}
-            data={item}
-            
-          />
+          <CardResult key={item.id} data={item} />
         ))}
       </style.SectionResults>
     </FetchContext.Provider>

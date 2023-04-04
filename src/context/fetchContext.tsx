@@ -17,7 +17,7 @@ const FetchProvider = ({ children }: ContextProps) => {
   const fetchData = async () => {
     setLoading(true)
     try {
-      const res = await new Promise<Root | null>((resolve, reject) => {
+      const res = await new Promise<Root>((resolve, reject) => {
         DZ.api('/chart/0', (response: Root | null) => {
           if (response === null) {
             reject(response)
@@ -26,13 +26,34 @@ const FetchProvider = ({ children }: ContextProps) => {
           }
         })
       })
-      setData(res)
+
+      enum ResProps {
+        albums = 'albums',
+        artists = 'artists',
+        playlists = 'playlists',
+        podcasts = 'podcasts',
+        tracks = 'tracks',
+      }
+      if (data !== null) {
+        const dataRes: Root = { ...data }
+        for (const prop in res) {
+          if (prop in dataRes) {
+            const propName = prop as ResProps
+            const newData =res[propName].data;
+            dataRes[propName].data = dataRes[propName].data.concat([...newData])
+            dataRes[propName].total += res[propName].total;
+          }
+        }
+      }
+
+      setData(dataRes)
     } catch (error) {
       setData(null)
     } finally {
       setLoading(false)
     }
   }
+
   useEffect(() => {
     fetchData()
   }, [])

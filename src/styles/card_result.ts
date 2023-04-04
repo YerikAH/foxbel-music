@@ -53,6 +53,10 @@ export const HeadingMusic = styled.h5`
   font: normal normal 700 0.9rem/1.2rem var(--font-principal);
   color: var(--black-100);
   margin-top: 0.5rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
 `
 export const TextAutor = styled.p`
   font: normal normal 400 0.75rem/1rem var(--font-principal);
