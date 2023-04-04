@@ -19,6 +19,8 @@ export const DetailMusic = styled.div`
   gap: 1.2rem;
   justify-content: start;
   align-items: center;
+  width: 100%;
+  max-width: 15.625rem;
 `
 export const ImageMusic = styled.img`
   max-width: 3.25rem;
@@ -38,11 +40,17 @@ export const DescriptionMusic = styled.div`
 export const TitleMusic = styled.h2`
   font: normal normal 700 0.9rem/1.2rem var(--font-principal);
   color: var(--white);
+  overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
 `
 export const AutorMusic = styled.span`
   margin-top: 0.5rem;
   font: normal normal 400 0.75rem/1rem var(--font-principal);
   color: var(--white);
+  overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
 `
 export const PlayerButtons = styled.div`
   display: flex;

@@ -19,6 +19,4 @@ export const CONTEXT_MUSIC_INIT: RootMusic = {
     return
   },
   allData: CHART_INIT
-  
-
 }

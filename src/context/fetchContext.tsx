@@ -30,24 +30,14 @@ const FetchProvider = ({ children }: ContextProps) => {
           }
         })
       })
-
- 
-      // const propOrder = [
-      //   ResProps.albums,
-      //   ResProps.artists,
-      //   ResProps.playlists,
-      //   ResProps.podcasts,
-      //   ResProps.tracks,
-      // ];
       if (data === null) {
-          setData(res)
+        setData(res)
         return 
       }
-      // const newElement: Root ={...data}
-      // for (let i = 0; i < Object.keys(newElement).length; i++) {
-      //   const element = newElement[propOrder[i]];
-      //   element.data= [...data.albums.data, ...res.albums.data]
-      // }
+      if(Object.values(res).every(prop => prop.total === 0)){
+        setIndex(index + 1)
+        return 
+      }     
       setData({
         ...data,
         [option]:{
@@ -61,9 +51,9 @@ const FetchProvider = ({ children }: ContextProps) => {
       setLoading(false)
     }
   }
-  const handleContext = () =>{
-    fetchData()
+  function handleContext (){
     setIndex(index + 1)
+    fetchData()
   }
 
   useEffect(() => {

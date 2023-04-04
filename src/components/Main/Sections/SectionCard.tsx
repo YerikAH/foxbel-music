@@ -14,7 +14,7 @@ const SectionCard = () => {
         ))}
       </style.SectionResults>
 
-      {!fetchContext.loader && (
+      {fetchContext.loader && (
         <style.BoxLoader>
           <Loader />
           <style.TextLoader>Cargando. . .</style.TextLoader>
