@@ -9,7 +9,8 @@ export interface RootGeneral {
 export interface RootMusic {
   currentIndex: number
   data: Daum | null
-  handleNextMusix(): void
-  handleBackMusic():void
+  handleManager(value: boolean):void
   handleMusicNew(dataProp: Daum): void
+  handleAddAllData(data: Root): void
+  allData: Root
 }

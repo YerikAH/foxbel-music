@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import * as style from '../../../styles/main'
 import Banner from './Banner'
 import NavigationMain from './NavigationMain'
@@ -20,8 +20,14 @@ const SectionsMain = () => {
       fetchContext.handleContext()
       console.log(fetchContext.root)
     }
-    // Aquí puedes hacer lo que necesites cuando se detecte que el usuario está moviendo el scroll
   };
+  useEffect(() => {
+    const data = fetchContext.root
+    if(data !== null) {
+      musicContext.handleAddAllData(data) 
+    }
+  }, [fetchContext.root])
+  
   
   return (
     <MusicContext.Provider value={musicContext}>

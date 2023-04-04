@@ -9,15 +9,16 @@ export const CONTEXT_INIT: RootGeneral = {
 export const CONTEXT_MUSIC_INIT: RootMusic = {
   currentIndex: 0,
   data: null,
-  handleBackMusic() {
+  handleManager() {
     return 
-  },
-  handleNextMusix(){
-    return
   },
   handleMusicNew(){
     return
-  }
+  },
+  handleAddAllData(){
+    return
+  },
+  allData: CHART_INIT
   
 
 }
