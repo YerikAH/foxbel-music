@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import styled from 'styled-components'
 
 export const NavigationMenu = styled.nav`
@@ -31,7 +32,7 @@ export const MenuUl = styled.ul`
 export const MenuList = styled.li`
   width: 100%;
 `
-export const MenuListLink = styled.a`
+export const MenuListLink = styled(Link)`
   width: 100%;
   font: normal normal 400 1rem/2rem var(--font-principal);
   color: ${(props) => (props.className === 'true' ? 'var(--red-principal)' : 'var(--white)')};

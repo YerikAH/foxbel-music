@@ -1,39 +1,54 @@
 import * as style from '../../styles/menu_option'
 import logo from '../../assets/foxbel-music.png'
+import { MenuOptions } from '../../interface/interface'
+import { AllOptions, PathRoutes } from '../../enum/enum'
+import { changeTrueValue } from '../../helpers/changeTrueValue'
+import { useState } from 'react'
 const MenuOption = () => {
-  const linkLibrary = [
+  const linkLibrary: MenuOptions[] = [
     {
-      name: 'Recientes',
+      name: AllOptions.recent,
       value: true,
+      path: PathRoutes.recent
     },
     {
-      name: 'Artistas',
+      name: AllOptions.artist,
       value: false,
+      path: PathRoutes.artist
     },
     {
-      name: 'Álbums',
+      name: AllOptions.albums,
       value: false,
+      path: PathRoutes.albums
     },
     {
-      name: 'Canciones',
+      name: AllOptions.podcast,
       value: false,
-    },
-    {
-      name: 'Estaciones',
-      value: false,
+      path: PathRoutes.podcast
     },
   ]
+  const [navData, setNavData] = useState<MenuOptions[]>(linkLibrary)
+  function handleLink(select: AllOptions) {
+    const newData = changeTrueValue(linkLibrary, select)
+    setNavData(newData)
+    console.log('Yep')
+  }
   return (
     <style.NavigationMenu>
-      <style.MenuListLink href='#' tabIndex={1}>
+      <style.MenuListLink to='/' tabIndex={1}>
         <style.ImageLogo src={logo} alt='logo' />
       </style.MenuListLink>
       <style.MenuBoxUl>
         <style.MenuUl>
           <style.MenuLinkTitle>Mi Librería</style.MenuLinkTitle>
-          {linkLibrary.map((item, idx) => (
+          {navData.map((item, idx) => (
             <style.MenuList key={idx}>
-              <style.MenuListLink className={`${item.value}`} tabIndex={1}>
+              <style.MenuListLink
+                className={`${item.value}`}
+                tabIndex={1}
+                to={item.path}
+                onClick={() => handleLink(item.name)}
+              >
                 {item.name}
               </style.MenuListLink>
             </style.MenuList>

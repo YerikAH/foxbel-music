@@ -5,3 +5,16 @@ export enum ResProps {
   podcasts = 'podcasts',
   tracks = 'tracks',
 }
+export enum AllOptions{
+  recent = 'Recientes',
+  artist = 'Artistas',
+  albums = 'Albums',
+  podcast = 'Podcast'
+}
+
+export enum PathRoutes{
+  recent = '/',
+  artist = '/artists',
+  albums = '/albums',
+  podcast = '/podcasts'
+}

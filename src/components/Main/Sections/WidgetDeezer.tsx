@@ -7,9 +7,7 @@ const WidgetDeezer = () => {
       src='https://widget.deezer.com/widget/light/playlist/1479458365'
       width='100%'
       height='300'
-      frameBorder='0'
-      // eslint-disable-next-line react/no-unknown-property
-      allowTransparency={true}
+      style={{border: 'none'}} 
       allow='encrypted-media; clipboard-write'
     ></iframe>
   </style.IframeDezzer>
