@@ -17,7 +17,7 @@ export const SimulationMenuOption = styled.section`
 `
 
 export const SectionBox = styled.article`
-  padding: 0 0.5rem 125px 0.5rem;
+  padding: 0 0.5rem 10rem 0.5rem;
   overflow: auto;
   height: 100vh;
   @media (min-width: 850px) {
@@ -40,6 +40,23 @@ export const SectionResults = styled.section`
   @media (min-width: 1260px) {
     max-width: 880px;
   }
+`
+export const BoxLoader = styled.div`
+  width: 100%;
+  margin: 0 auto;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  margin-top: 4rem;
+  @media (min-width: 1260px) {
+    max-width: 880px;
+  }
+`
+export const TextLoader = styled.p`
+  font: normal normal 700 1rem/1.5rem var(--font-principal);
+  color: var(--soft-gray);
+  margin-top:1rem;
+  text-align: center;
 `
 export const HeadlinePrincipal = styled.h2`
   font: normal normal 700 1.375rem/1.75rem var(--font-principal);

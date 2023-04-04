@@ -1,153 +1,149 @@
 .container {
-    position: relative;
-    width: 30px;
-    height: 30px;
-    border-radius: 15px;
-    -webkit-animation: rotation 1s infinite;
-            animation: rotation 1s infinite;
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 15px;
+  -webkit-animation: rotation 1s infinite;
+  animation: rotation 1s infinite;
+}
+.container .shape {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 15rem;
+}
+.container .shape.shape-1 {
+  left: 0;
+  background-color: var(--soft-gray);
+}
+.container .shape.shape-2 {
+  right: 0;
+  background-color: var(--soft-gray);
+}
+.container .shape.shape-3 {
+  bottom: 0;
+  background-color: var(--soft-gray);
+}
+.container .shape.shape-4 {
+  bottom: 0;
+  right: 0;
+  background-color: var(--soft-gray);
+}
+.container .shape-1 {
+  -webkit-animation: shape1 0.5s infinite alternate;
+  animation: shape1 0.5s infinite alternate;
+}
+.container .shape-2 {
+  -webkit-animation: shape2 0.5s infinite alternate;
+  animation: shape2 0.5s infinite alternate;
+}
+.container .shape-3 {
+  -webkit-animation: shape3 0.5s infinite alternate;
+  animation: shape3 0.5s infinite alternate;
+}
+.container .shape-4 {
+  -webkit-animation: shape4 0.5s infinite alternate;
+  animation: shape4 0.5s infinite alternate;
+}
+
+@-webkit-keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  .container .shape {
-    position: absolute;
-    width: 10px;
-    height: 10px;
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-  .container .shape.shape-1 {
-    left: 0;
-    background-color: #4285F4;
-    border-top-left-radius: 10px;
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
   }
-  .container .shape.shape-2 {
-    right: 0;
-    background-color: #34A853;
-    border-top-right-radius: 10px;
+  to {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-  .container .shape.shape-3 {
-    bottom: 0;
-    background-color: #FBBC05;
-    border-bottom-left-radius: 10px;
+}
+@-webkit-keyframes shape1 {
+  from {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
-  .container .shape.shape-4 {
-    bottom: 0;
-    right: 0;
-    background-color: #EA4335;
-    border-bottom-right-radius: 10px;
+  to {
+    -webkit-transform: translate(20px, 20px);
+    transform: translate(20px, 20px);
   }
-  .container .shape-1 {
-    -webkit-animation: shape1 0.5s infinite alternate;
-            animation: shape1 0.5s infinite alternate;
+}
+@keyframes shape1 {
+  from {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
-  .container .shape-2 {
-    -webkit-animation: shape2 0.5s infinite alternate;
-            animation: shape2 0.5s infinite alternate;
+  to {
+    -webkit-transform: translate(20px, 20px);
+    transform: translate(20px, 20px);
   }
-  .container .shape-3 {
-    -webkit-animation: shape3 0.5s infinite alternate;
-            animation: shape3 0.5s infinite alternate;
+}
+@-webkit-keyframes shape2 {
+  from {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
-  .container .shape-4 {
-    -webkit-animation: shape4 0.5s infinite alternate;
-            animation: shape4 0.5s infinite alternate;
+  to {
+    -webkit-transform: translate(-20px, 20px);
+    transform: translate(-20px, 20px);
   }
-  
-  @-webkit-keyframes rotation {
-    from {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
+}
+@keyframes shape2 {
+  from {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
-  
-  @keyframes rotation {
-    from {
-      -webkit-transform: rotate(0deg);
-              transform: rotate(0deg);
-    }
-    to {
-      -webkit-transform: rotate(360deg);
-              transform: rotate(360deg);
-    }
+  to {
+    -webkit-transform: translate(-20px, 20px);
+    transform: translate(-20px, 20px);
   }
-  @-webkit-keyframes shape1 {
-    from {
-      -webkit-transform: translate(0, 0);
-              transform: translate(0, 0);
-    }
-    to {
-      -webkit-transform: translate(5px, 5px);
-              transform: translate(5px, 5px);
-    }
+}
+@-webkit-keyframes shape3 {
+  from {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
-  @keyframes shape1 {
-    from {
-      -webkit-transform: translate(0, 0);
-              transform: translate(0, 0);
-    }
-    to {
-      -webkit-transform: translate(5px, 5px);
-              transform: translate(5px, 5px);
-    }
+  to {
+    -webkit-transform: translate(20px, -20px);
+    transform: translate(20px, -20px);
   }
-  @-webkit-keyframes shape2 {
-    from {
-      -webkit-transform: translate(0, 0);
-              transform: translate(0, 0);
-    }
-    to {
-      -webkit-transform: translate(-5px, 5px);
-              transform: translate(-5px, 5px);
-    }
+}
+@keyframes shape3 {
+  from {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
-  @keyframes shape2 {
-    from {
-      -webkit-transform: translate(0, 0);
-              transform: translate(0, 0);
-    }
-    to {
-      -webkit-transform: translate(-5px, 5px);
-              transform: translate(-5px, 5px);
-    }
+  to {
+    -webkit-transform: translate(20px, -20px);
+    transform: translate(20px, -20px);
   }
-  @-webkit-keyframes shape3 {
-    from {
-      -webkit-transform: translate(0, 0);
-              transform: translate(0, 0);
-    }
-    to {
-      -webkit-transform: translate(5px, -5px);
-              transform: translate(5px, -5px);
-    }
+}
+@-webkit-keyframes shape4 {
+  from {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
-  @keyframes shape3 {
-    from {
-      -webkit-transform: translate(0, 0);
-              transform: translate(0, 0);
-    }
-    to {
-      -webkit-transform: translate(5px, -5px);
-              transform: translate(5px, -5px);
-    }
+  to {
+    -webkit-transform: translate(-20px, -20px);
+    transform: translate(-20px, -20px);
   }
-  @-webkit-keyframes shape4 {
-    from {
-      -webkit-transform: translate(0, 0);
-              transform: translate(0, 0);
-    }
-    to {
-      -webkit-transform: translate(-5px, -5px);
-              transform: translate(-5px, -5px);
-    }
+}
+@keyframes shape4 {
+  from {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
-  @keyframes shape4 {
-    from {
-      -webkit-transform: translate(0, 0);
-              transform: translate(0, 0);
-    }
-    to {
-      -webkit-transform: translate(-5px, -5px);
-              transform: translate(-5px, -5px);
-    }
+  to {
+    -webkit-transform: translate(-20px, -20px);
+    transform: translate(-20px, -20px);
   }
-  
+}
