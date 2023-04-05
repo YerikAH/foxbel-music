@@ -1,37 +1,16 @@
 import * as style from '../../styles/menu_option'
 import logo from '../../assets/foxbel-music.png'
 import { MenuOptions } from '../../interface/interface'
-import { AllOptions, PathRoutes } from '../../enum/enum'
+import { AllOptions } from '../../enum/enum'
 import { changeTrueValue } from '../../helpers/changeTrueValue'
 import { useState } from 'react'
+import { LINK_LIBRARY } from '../../constant/constant'
 const MenuOption = () => {
-  const linkLibrary: MenuOptions[] = [
-    {
-      name: AllOptions.recent,
-      value: true,
-      path: PathRoutes.recent
-    },
-    {
-      name: AllOptions.artist,
-      value: false,
-      path: PathRoutes.artist
-    },
-    {
-      name: AllOptions.albums,
-      value: false,
-      path: PathRoutes.albums
-    },
-    {
-      name: AllOptions.podcast,
-      value: false,
-      path: PathRoutes.podcast
-    },
-  ]
-  const [navData, setNavData] = useState<MenuOptions[]>(linkLibrary)
+
+  const [navData, setNavData] = useState<MenuOptions[]>(LINK_LIBRARY)
   function handleLink(select: AllOptions) {
-    const newData = changeTrueValue(linkLibrary, select)
+    const newData = changeTrueValue(LINK_LIBRARY, select)
     setNavData(newData)
-    console.log('Yep')
   }
   return (
     <style.NavigationMenu>

@@ -7,7 +7,8 @@ import { ContextProps } from '../interface/props'
 import { Root } from '../interface/chart'
 import { CONTEXT_INIT } from '../constant/context'
 import { RootGeneral } from '../interface/context'
-import { ResProps } from '../enum/enum'
+import { PathRoutes, ResProps } from '../enum/enum'
+import { useLocation } from 'react-router-dom'
 
 const FetchContext = createContext<RootGeneral>(CONTEXT_INIT)
 
@@ -17,6 +18,7 @@ const FetchProvider = ({ children }: ContextProps) => {
   const [loading, setLoading] = useState(false)
   const [index, setIndex] = useState(0)
   const [dataContext, setDataContext] = useState<RootGeneral>(CONTEXT_INIT)
+  const location = useLocation()
   
   const fetchData = async () => {
     setLoading(true)
@@ -59,6 +61,25 @@ const FetchProvider = ({ children }: ContextProps) => {
   useEffect(() => {
     handleContext()
   }, [])
+
+  useEffect(() => {
+    const pathApp = [
+      PathRoutes.albums,
+      PathRoutes.artist,
+      PathRoutes.podcast,
+      PathRoutes.podcast
+    ]
+    if(location.pathname === PathRoutes.recent){
+      setOption(ResProps.tracks)
+    }else if(location.pathname === PathRoutes.albums){
+      setOption(ResProps.albums)
+    }else if(location.pathname === PathRoutes.artist){
+      setOption(ResProps.artists)
+    }else if(location.pathname === PathRoutes.podcast){
+      setOption(ResProps.podcasts)
+    }
+  }, [location])
+  
   useEffect(() => {
     if (data !== null) {
       const valueGeneral: RootGeneral = {

@@ -3,11 +3,10 @@ import SectionsMain from './Sections/SectionsMain'
 
 const Main = () => {
   return (
-    
-      <style.MainStyle>
-        <style.SimulationMenuOption></style.SimulationMenuOption>
-        <SectionsMain/>
-      </style.MainStyle>
+    <style.MainStyle>
+      <style.SimulationMenuOption></style.SimulationMenuOption>
+      <SectionsMain />
+    </style.MainStyle>
   )
 }
 
