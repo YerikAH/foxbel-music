@@ -1,8 +1,12 @@
-import { Daum } from './chart';
+import { Daum, Daum3 } from './chart';
 import { RootSearch } from './search';
 
 export interface CardResultProps {
     data: Daum,
+}
+
+export interface CardArtistProps{
+    data: Daum3
 }
 export interface ContextProps {
     children: JSX.Element,

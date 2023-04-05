@@ -22,12 +22,14 @@ const SectionsMain = () => {
     const element = refElement.current
     if (data !== null) musicContext.handleAddAllData(data)
     if (element !== null) limitScroll(element)
-  }, [fetchContext.root])
+    console.log('nueva peticion')
+  }, [fetchContext.root,refElement.current?.scrollTop])
 
   function limitScroll(element: HTMLElement) {
     const moveScroll = element.scrollTop
     const maxScroll = element.scrollHeight - element.clientHeight
     const condition = moveScroll >= maxScroll - 200 || (moveScroll === 0 && maxScroll === 0)
+    console.info(moveScroll, maxScroll)
     if (condition) fetchContext.handleContext()
   }
 
