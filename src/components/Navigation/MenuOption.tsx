@@ -6,7 +6,6 @@ import { changeTrueValue } from '../../helpers/changeTrueValue'
 import { useState } from 'react'
 import { LINK_LIBRARY } from '../../constant/constant'
 const MenuOption = () => {
-
   const [navData, setNavData] = useState<MenuOptions[]>(LINK_LIBRARY)
   function handleLink(select: AllOptions) {
     const newData = changeTrueValue(LINK_LIBRARY, select)
@@ -21,13 +20,8 @@ const MenuOption = () => {
         <style.MenuUl>
           <style.MenuLinkTitle>Mi Librería</style.MenuLinkTitle>
           {navData.map((item, idx) => (
-            <style.MenuList key={idx}>
-              <style.MenuListLink
-                className={`${item.value}`}
-                tabIndex={1}
-                to={item.path}
-                onClick={() => handleLink(item.name)}
-              >
+            <style.MenuList key={idx} onClick={() => handleLink(item.name)}>
+              <style.MenuListLink className={`${item.value}`} tabIndex={1} to={item.path}>
                 {item.name}
               </style.MenuListLink>
             </style.MenuList>

@@ -19,33 +19,29 @@ const FetchProvider = ({ children }: ContextProps) => {
   const [index, setIndex] = useState(0)
   const [dataContext, setDataContext] = useState<RootGeneral>(CONTEXT_INIT)
   const location = useLocation()
-  
+
   const fetchData = async () => {
     setLoading(true)
     try {
       const res = await new Promise<Root>((resolve, reject) => {
         DZ.api(`/chart/${index}`, (response: Root | null) => {
           if (response === null) {
-            reject(response)
-          } else {
-            resolve(response)
+            return reject(response);
           }
+          resolve(response);
         })
       })
       if (data === null) {
         setData(res)
-        return 
+        return
       }
-      if(Object.values(res).every(prop => prop.total === 0)){
-        setIndex(index + 1)
-        return 
-      }     
+      const { data: newData } = res[option]
       setData({
         ...data,
-        [option]:{
-          data:[...data[option].data, ...res[option].data],
-          total: data[option].data.length
-        }
+        [option]: {
+          data: [...data[option].data, ...newData],
+          total: newData.length,
+        },
       })
     } catch (error) {
       setData(null)
@@ -53,7 +49,7 @@ const FetchProvider = ({ children }: ContextProps) => {
       setLoading(false)
     }
   }
-  function handleContext (){
+  function handleContext() {
     setIndex(index + 1)
     fetchData()
   }
@@ -63,29 +59,23 @@ const FetchProvider = ({ children }: ContextProps) => {
   }, [])
 
   useEffect(() => {
-    const pathApp = [
-      PathRoutes.albums,
-      PathRoutes.artist,
-      PathRoutes.podcast,
-      PathRoutes.podcast
-    ]
-    if(location.pathname === PathRoutes.recent){
-      setOption(ResProps.tracks)
-    }else if(location.pathname === PathRoutes.albums){
-      setOption(ResProps.albums)
-    }else if(location.pathname === PathRoutes.artist){
-      setOption(ResProps.artists)
-    }else if(location.pathname === PathRoutes.podcast){
-      setOption(ResProps.podcasts)
+    const routeOptions = {
+      [PathRoutes.recent]: ResProps.tracks,
+      [PathRoutes.albums]: ResProps.albums,
+      [PathRoutes.artist]: ResProps.artists,
+      [PathRoutes.podcast]: ResProps.podcasts,
     }
+    const optionsLocation = location.pathname as PathRoutes
+    const option = routeOptions[optionsLocation] ?? ResProps.tracks
+    setOption(option)
   }, [location])
-  
+
   useEffect(() => {
     if (data !== null) {
       const valueGeneral: RootGeneral = {
         loader: loading,
         root: data,
-        handleContext: handleContext
+        handleContext: handleContext,
       }
       setDataContext(valueGeneral)
     }
