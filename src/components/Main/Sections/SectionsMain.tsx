@@ -6,6 +6,8 @@ import { useLocation } from 'react-router-dom'
 import { PathRoutes } from '../../../enum/enum'
 import Recent from './Recent'
 import Artist from './Artist'
+import Album from './Album'
+import Podcast from './Podcast'
 const SectionsMain = () => {
   const musicContext = useContext(MusicContext)
   const fetchContext = useContext(FetchContext)
@@ -37,6 +39,8 @@ const SectionsMain = () => {
     <style.SectionBox onScroll={(e) => handleScroll(e)} ref={refElement}>
       {location.pathname === PathRoutes.recent && <Recent />}
       {location.pathname === PathRoutes.artist && <Artist />}
+      {location.pathname === PathRoutes.albums && <Album />}
+      {location.pathname === PathRoutes.podcast && <Podcast />}
     </style.SectionBox>
   )
 }

@@ -6,6 +6,8 @@ import Loader from '../../ui/Loader'
 import { PathRoutes } from '../../../enum/enum'
 import { useLocation } from 'react-router-dom'
 import CardArtist from './CardArtist'
+import CardAlbum from './CardAlbum'
+import CardPodcast from './CardPodcast'
 
 const SectionCard = () => {
   const location = useLocation()
@@ -17,6 +19,10 @@ const SectionCard = () => {
           fetchContext.root?.tracks.data.map((item, idx) => <CardResult key={idx} data={item} />)}
         {location.pathname === PathRoutes.artist &&
           fetchContext.root?.artists.data.map((item, idx) => <CardArtist key={idx} data={item}/>)}
+        {location.pathname === PathRoutes.albums &&
+          fetchContext.root?.albums.data.map((item, idx) => <CardAlbum key={idx} data={item}/>)}
+        {location.pathname === PathRoutes.podcast &&
+          fetchContext.root?.podcasts.data.map((item, idx) => <CardPodcast key={idx} data={item} />)}
       </style.SectionResults>
 
       {fetchContext.loader && (

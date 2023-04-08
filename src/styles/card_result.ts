@@ -18,6 +18,7 @@ export const BoxImage = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: 2rem;
   background-image: ${(props) =>
     props.className === undefined
       ? 'url("https://images.pexels.com/photos/2479967/pexels-photo-2479967.jpeg?auto=compress&cs=tinysrgb&w=1600")'

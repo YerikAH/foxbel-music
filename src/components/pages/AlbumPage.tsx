@@ -1,13 +1,13 @@
 import Main from '../Main/Main'
 import MenuOption from '../Navigation/MenuOption'
 
-const ArtistPage = () => {
+const AlbumPage = () => {
   return (
     <>
-      <MenuOption />
-      <Main />
-    </>
+    <MenuOption />
+    <Main />
+  </>
   )
 }
 
-export default ArtistPage
+export default AlbumPage
