@@ -1,6 +1,7 @@
+import { AllOptions } from '../enum/enum';
 import { MenuOptions } from '../interface/interface';
 
-export function changeTrueValue(obj: MenuOptions[], myVar: string): MenuOptions[] {
+export function changeTrueValue(obj: MenuOptions[], myVar: AllOptions): MenuOptions[] {
     obj = obj.map((o) => {
       if (o.value === true) {
         return { ...o, value: false };

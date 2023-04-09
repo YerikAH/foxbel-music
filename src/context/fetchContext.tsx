@@ -7,8 +7,9 @@ import { ContextProps } from '../interface/props'
 import { Root } from '../interface/chart'
 import { CONTEXT_INIT } from '../constant/context'
 import { RootGeneral } from '../interface/context'
-import { PathRoutes, ResProps } from '../enum/enum'
+import {  ResProps } from '../enum/enum'
 import { useLocation } from 'react-router-dom'
+import { routeSearch } from '../components/helpers/helpers'
 
 const FetchContext = createContext<RootGeneral>(CONTEXT_INIT)
 
@@ -59,14 +60,7 @@ const FetchProvider = ({ children }: ContextProps) => {
   }, [])
 
   useEffect(() => {
-    const routeOptions = {
-      [PathRoutes.recent]: ResProps.tracks,
-      [PathRoutes.albums]: ResProps.albums,
-      [PathRoutes.artist]: ResProps.artists,
-      [PathRoutes.podcast]: ResProps.podcasts,
-    }
-    const optionsLocation = location.pathname as PathRoutes
-    const option = routeOptions[optionsLocation] ?? ResProps.tracks
+    const option = routeSearch(location.pathname)
     setOption(option)
   }, [location])
 
