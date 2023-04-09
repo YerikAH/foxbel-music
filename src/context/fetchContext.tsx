@@ -9,7 +9,7 @@ import { CONTEXT_INIT } from '../constant/context'
 import { RootGeneral } from '../interface/context'
 import {  ResProps } from '../enum/enum'
 import { useLocation } from 'react-router-dom'
-import { routeSearch } from '../components/helpers/helpers'
+import { routeSearch } from '../helpers/helpers'
 
 const FetchContext = createContext<RootGeneral>(CONTEXT_INIT)
 

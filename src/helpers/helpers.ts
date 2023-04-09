@@ -1,4 +1,4 @@
-import { AllOptions, PathRoutes, ResProps } from '../../enum/enum'
+import { AllOptions, PathRoutes, ResProps } from '../enum/enum'
 
 export function routeSearch(pathname: string){
     const routeOptions = {

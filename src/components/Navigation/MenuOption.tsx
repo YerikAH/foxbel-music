@@ -5,7 +5,7 @@ import { changeTrueValue } from '../../helpers/changeTrueValue'
 import { useEffect, useState } from 'react'
 import { LINK_LIBRARY } from '../../constant/constant'
 import { useLocation } from 'react-router-dom'
-import {  routeSearchMenu } from '../helpers/helpers'
+import {  routeSearchMenu } from '../../helpers/helpers'
 const MenuOption = () => {
   const [navData, setNavData] = useState<MenuOptions[]>(LINK_LIBRARY)
   const location = useLocation()
