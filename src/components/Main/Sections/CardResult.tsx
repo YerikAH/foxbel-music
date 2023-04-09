@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 import { CardResultProps } from '../../../interface/props'
-import * as style from '../../../styles/card_result'
+import * as style from '../../../styles/card'
 import MusicContext from '../../../context/musicContext'
 import IconDots from '../../icons/IconDots'
 import IconPlay from '../../icons/IconPlay'
