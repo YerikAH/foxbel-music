@@ -1,28 +1,29 @@
 import { useEffect, useState } from 'react'
 import { SearchWiki, WikiNotFound } from '../interface/searchWiki'
 import { WIKI_NOT_FOUND } from '../constant/data'
+import serviceApi from '../service/service'
+
+
 function useSearchWiki(query: string) {
   const [data, setData] = useState<SearchWiki | WikiNotFound>(WIKI_NOT_FOUND)
   const [loading, setLoading] = useState(false)
   const [dataReturn, setDataReturn] = useState<SearchWiki | WikiNotFound>(WIKI_NOT_FOUND)
-  const fetchData = async (query: string) => {
-    setLoading(true)
-    const url =
-      'https://es.wikipedia.org/w/api.php?action=query&list=search&srprop=snippet&format=json&origin=*&utf8=&srsearch='
-    try {
-      const res = await fetch(`${url}${query}`)
-      console.log(`${url}${query}`)
-      const json = await res.json()
-      if (!res.ok) throw new Error('Error')
-      setData(json)
-    } catch (error) {
-      setData(WIKI_NOT_FOUND)
-    } finally {
-      setLoading(false)
-    }
-  }
+
   useEffect(() => {
-    if (query.length > 2) fetchData(query)
+    if (query.length > 2) {
+      setLoading(true)
+      serviceApi
+        .searchWiki(query)
+        .then((res) => {
+          setData(res)
+        })
+        .catch((err: WikiNotFound) => {
+          setData(err)
+        })
+        .finally(() => {
+          setLoading(false)
+        })
+    }
   }, [query])
   useEffect(() => {
     if (data !== null) {

@@ -20,7 +20,7 @@ export const OPTION_CONST: ResProps[]=[
 export const LINK_LIBRARY: MenuOptions[] = [
   {
     name: AllOptions.recent,
-    value: true,
+    value: false,
     path: PathRoutes.recent
   },
   {
