@@ -11,7 +11,7 @@ const PlayerMusic = () => {
   const [musicSelect, setMusicSelect] = useState<Daum | null>(null)
   const fetchContext = useContext(FetchContext)
   const musicContext = useContext(MusicContext)
-  const [volume, setVolume] = useState(75)
+  const [volume, setVolume] = useState(70)
   function handleVolume(vol: number){
     setVolume(vol)
   }
@@ -25,6 +25,7 @@ const PlayerMusic = () => {
           <style.PlayerMusicStyle>
             <style.MusicStyleContent>
               <DetailsMusic data={musicSelect} />
+              
               <ButtonsPlayer data={musicSelect} volume={volume} handleManager={musicContext.handleManager}/>
               <VolumenSettings volume={volume} handleVolume={handleVolume}/>
             </style.MusicStyleContent>
