@@ -21,6 +21,7 @@ export interface ContextProps {
 export interface DetailsMusicProps{
     data: Daum | undefined | null
     volume?: number,
+    extra?: string
     handleManager?(value: boolean):void
 }
 export interface VolumeMusicProps{
