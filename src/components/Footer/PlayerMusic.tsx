@@ -25,7 +25,6 @@ const PlayerMusic = () => {
           <style.PlayerMusicStyle>
             <style.MusicStyleContent>
               <DetailsMusic data={musicSelect} />
-              
               <ButtonsPlayer data={musicSelect} volume={volume} handleManager={musicContext.handleManager}/>
               <VolumenSettings volume={volume} handleVolume={handleVolume}/>
             </style.MusicStyleContent>

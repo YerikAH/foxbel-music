@@ -22,5 +22,9 @@ export function routeSearchMenu(pathname: string){
       const option = routeOptions[optionsLocation] ?? AllOptions.recent
       return option
 }
-
+export function convertMusicTimer(time: number | undefined):string{
+  const roundedNumber = Math.round(time ?? 0)
+  if(roundedNumber < 10) return `0:0${roundedNumber}`
+  return `0:${roundedNumber}`
+}
 

@@ -26,6 +26,14 @@ export const DetailMusic = styled.div`
     max-width: 15.625rem;
   }
 `
+export const PlayerText = styled.p`
+  position: absolute;
+  font-size: 0.8rem;
+  color: var(--white);
+  top: 0.3rem;
+  right: ${props => props.className === 'end' && '-2rem'};
+   left: ${props => props.className !== 'end' && '-2rem'};
+`
 export const ImageMusic = styled.img`
   max-width: 3.25rem;
   width: 100%;
@@ -62,15 +70,25 @@ export const PlayerRepro = styled.div`
   place-items: center;
   width: 100%;
   place-content: center;
+  position: relative;
 `
 export const PlayerTimer = styled.input`
   ${WhiteLine(5, 5, 200, 3)}
   transition: 0.3s;
   width: 200px;
   height: 3px;
-
+  cursor: pointer;
   @media (min-width: 720px) {
     ${WhiteLine(5, 5, 400, 3)}
+    width: 400px;
+  }
+
+`
+export const PlayerTimerBox = styled.div`
+  position: relative;
+  margin-top: -0.5rem;
+  width: 200px;
+  @media (min-width: 720px) {
     width: 400px;
   }
 `
@@ -79,6 +97,7 @@ export const PlayerButtons = styled.div`
   place-items: center;
   gap: 1.2rem;
   padding: 0.5rem 0;
+  scale: 0.8;
   @media (min-width: 850px) {
     padding: 0;
   }
