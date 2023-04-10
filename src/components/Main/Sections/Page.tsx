@@ -9,6 +9,7 @@ import Recent from './Recent'
 import Artist from './Artist'
 import Album from './Album'
 import Podcast from './Podcast'
+import BannerOption from './BannerOptions'
 
 const Page = () => {
   const musicContext = useContext(MusicContext)
@@ -17,7 +18,7 @@ const Page = () => {
     <>
       <MusicContext.Provider value={musicContext}>
         <NavigationMain />
-        {musicContext.data !== null ? <Banner /> : <WidgetDeezer />}
+        {musicContext.data !== null ? <Banner /> : <BannerOption />}
         {location.pathname === PathRoutes.recent && <Recent />}
         {location.pathname === PathRoutes.artist && <Artist />}
         {location.pathname === PathRoutes.albums && <Album />}

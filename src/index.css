@@ -14,6 +14,7 @@
   --gray: #4f4f4f;
   --soft-gray: #bdbdbd;
   --white: #fff;
+  --black-10:rgba(0, 0, 0, 0.03); 
 }
 
 /* reset css*/

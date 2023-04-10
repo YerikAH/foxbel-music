@@ -5,8 +5,8 @@ import IconNextPlayer from '../icons/IconNextPlayer'
 import IconPlay from '../icons/IconPlay'
 import IconPause from '../icons/IconPause'
 import PlayerContext from '../../context/playerContext'
-import MusicContext from '../../context/musicContext'
 import { convertMusicTimer } from '../../helpers/helpers'
+
 const ButtonsPlayer = ({ data, volume, handleManager }: DetailsMusicProps) => {
   const playerContext = useContext(PlayerContext)
   const [timerMusic, setTimerMusic] = useState(0)

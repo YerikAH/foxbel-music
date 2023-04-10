@@ -7,3 +7,13 @@ export interface Error {
     message: string;
     code:    number;
 }
+
+export interface ErrorArtist {
+    error: ErrorClass;
+}
+
+export interface ErrorClass {
+    type:    string;
+    message: string;
+    code:    number;
+}

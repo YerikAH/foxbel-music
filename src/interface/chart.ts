@@ -45,6 +45,9 @@ export interface Root {
     radio?: boolean
     tracklist: string
     type: string
+    share?: string
+    nb_fan?: number
+    nb_album?: number
   }
   
   export interface Album {
