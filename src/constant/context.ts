@@ -1,4 +1,4 @@
-import { RootGeneral, RootMusic } from '../interface/context'
+import { BannerContext, RootGeneral, RootMusic } from '../interface/context'
 import { CHART_INIT } from './chart'
 
 export const CONTEXT_INIT: RootGeneral = {
@@ -23,4 +23,18 @@ export const CONTEXT_MUSIC_INIT: RootMusic = {
     return
   },
   bannerSpecial: false
+}
+export const ERROR_DATA_ARTIST = {
+  error:{
+    code: 0,
+    message: '',
+    type: ''
+  }
+}
+export const BANNER_CONTEXT:BannerContext  = {
+  loading: false,
+  data: ERROR_DATA_ARTIST,
+  handleNewData(){
+    return
+  }
 }

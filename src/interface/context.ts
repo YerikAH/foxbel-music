@@ -1,3 +1,4 @@
+import { ArtistList, ArtistListError } from './artistMusic'
 import { Daum, Root } from './chart'
 
 export interface RootGeneral {
@@ -15,4 +16,10 @@ export interface RootMusic {
   allData: Root
   bannerSpecial : boolean
   selectSome(value: boolean): void
+}
+
+export interface BannerContext {
+  loading: boolean
+  data: ArtistList | ArtistListError
+  handleNewData(id: number): void
 }

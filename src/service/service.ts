@@ -1,6 +1,6 @@
 import { WIKI_NOT_FOUND } from '../constant/data'
-import { Artist, Root } from '../interface/chart'
-import { ErrorArtist } from '../interface/error'
+import { ArtistList, ArtistListError } from '../interface/artistMusic'
+import {  Root } from '../interface/chart'
 import { RootSearch } from '../interface/search'
 import { SearchWiki, WikiNotFound } from '../interface/searchWiki'
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -51,10 +51,11 @@ const serviceApi = {
     })
   },
 
-  artist: (id: number): Promise<Artist | ErrorArtist> => {
-    return new Promise<Artist | ErrorArtist>((resolve, reject) => {
-      DZ.api(`/a/${id}`, (response: Artist | ErrorArtist) => {
-        if (response) {
+  artist: (id: number): Promise<ArtistList | ArtistListError> => {
+    return new Promise<ArtistList | ArtistListError>((resolve, reject) => {
+      DZ.api(`/artist/${id}/top?limit=50`, (response: ArtistList | ArtistListError) => {
+        const artistTest = response as ArtistListError
+        if (artistTest.error) {
           return reject(response)
         }
         resolve(response)

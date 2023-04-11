@@ -89,3 +89,13 @@ export enum TitleVersion {
 export enum DatumType {
   Track = 'track',
 }
+
+export interface ArtistListError {
+  error: Error;
+}
+
+export interface Error {
+  type:    string;
+  message: string;
+  code:    number;
+}

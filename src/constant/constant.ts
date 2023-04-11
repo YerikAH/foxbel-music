@@ -1,4 +1,5 @@
 import { AllOptions, PathRoutes, ResProps } from '../enum/enum'
+import { ArtistList } from '../interface/artistMusic'
 import { MenuOptions } from '../interface/interface'
 import { RootSearch } from '../interface/search'
 
@@ -9,33 +10,38 @@ export const SEARCH_CONST: RootSearch = {
   total: 0,
 }
 
-export const OPTION_CONST: ResProps[]=[
+export const OPTION_CONST: ResProps[] = [
   ResProps.albums,
   ResProps.artists,
   ResProps.playlists,
   ResProps.podcasts,
-  ResProps.tracks
+  ResProps.tracks,
 ]
 
 export const LINK_LIBRARY: MenuOptions[] = [
   {
     name: AllOptions.recent,
     value: false,
-    path: PathRoutes.recent
+    path: PathRoutes.recent,
   },
   {
     name: AllOptions.artist,
     value: false,
-    path: PathRoutes.artist
+    path: PathRoutes.artist,
   },
   {
     name: AllOptions.albums,
     value: false,
-    path: PathRoutes.albums
+    path: PathRoutes.albums,
   },
   {
     name: AllOptions.podcast,
     value: false,
-    path: PathRoutes.podcast
+    path: PathRoutes.podcast,
   },
 ]
+export const ARTIST_LIST: ArtistList = {
+  data: [],
+  next: '',
+  total: 0,
+}
