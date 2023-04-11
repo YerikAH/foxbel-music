@@ -42,10 +42,20 @@ export enum AlbumType {
 }
 
 export interface Artist {
-  id: number
-  name: Name
-  tracklist: string
-  type: ArtistType
+  id?: number
+  name?: string
+  link?: string
+  picture?: string
+  picture_small?: string
+  picture_medium?: string
+  picture_big?: string
+  picture_xl?: string
+  radio?: boolean
+  tracklist?: string
+  type?: string
+  share?: string
+  nb_fan?: number
+  nb_album?: number
 }
 
 export enum Name {
@@ -91,11 +101,11 @@ export enum DatumType {
 }
 
 export interface ArtistListError {
-  error: Error;
+    error: Error;
 }
 
 export interface Error {
-  type:    string;
-  message: string;
-  code:    number;
+    type:    string;
+    message: string;
+    code:    number;
 }

@@ -28,23 +28,23 @@ export interface Root {
     preview: string
     md5_image: string
     position?: number
-    artist: Artist
-    album: Album
+    artist?: Artist
+    album?: Album
     type: string
   }
   
   export interface Artist {
-    id: number
-    name: string
-    link: string
-    picture: string
-    picture_small: string
-    picture_medium: string
-    picture_big: string
-    picture_xl: string
+    id?: number
+    name?: string
+    link?: string
+    picture?: string
+    picture_small?: string
+    picture_medium?: string
+    picture_big?: string
+    picture_xl?: string
     radio?: boolean
-    tracklist: string
-    type: string
+    tracklist?: string
+    type?: string
     share?: string
     nb_fan?: number
     nb_album?: number
