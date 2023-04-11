@@ -22,4 +22,6 @@ export interface BannerContext {
   loading: boolean
   data: ArtistList | ArtistListError
   handleNewData(id: number): void
+  autor: string;
+  setAutor: (nuevoAutor: string) => void;
 }

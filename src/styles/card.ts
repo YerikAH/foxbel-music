@@ -1,5 +1,22 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
+
+const buttonOrLink = css`
+
+  cursor: pointer;
+
+  position: absolute;
+  top: 0;
+  left: 0%;
+  z-index: 1;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  display: flex;
+  transition: 0.3s;
+`
 export const CardResult = styled.div`
   display: grid;
   place-items: start;
@@ -48,14 +65,19 @@ export const BoxImageButton = styled.button`
     }
   }
 `
+
 export const BoxImageOptions = styled.button`
-  position: absolute;
+    position: absolute;
   top: 0;
   right: 0;
   margin: 0.8rem;
   background: transparent;
   border: none;
 `
+export const BoxImageLink = styled.a`
+  ${buttonOrLink}
+`
+
 export const HeadingMusic = styled.h5`
   font: normal normal 700 0.9rem/1.2rem var(--font-principal);
   color: var(--black-100);
@@ -77,17 +99,7 @@ export const TextAutor = styled.p`
 
 
 export const ButtonLink = styled.button`
-  position: absolute;
-  top: 0;
-  left: 0%;
-  z-index: 1;
-  outline: none;
-  width: 100%;
-  height: 100%;
-  background: transparent;
-  border: none;
-  display: flex;
-  transition: 0.3s;
+  ${buttonOrLink}
 `
 
 export const BoxImageAtrr = styled.img`

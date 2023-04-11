@@ -17,13 +17,13 @@ const Banner = () => {
   const { dataReturn, loading } = useSearchWiki(query)
 
   useEffect(() => {
-    setQuery(musicContext.data?.artist.name.replace(/\s+/g, '%20') ?? '')
+    setQuery(musicContext.data?.artist?.name?.replace(/\s+/g, '%20') ?? '')
     setMusicSelect(musicContext.data)
     if(dataReturn.query.search.length > 1){
       const search = dataReturn.query.search as Search[] 
       setExtra(search[0].snippet)
     }
-    console.log(musicContext.data?.artist.name)
+
   }, [musicContext.data, loading, dataReturn])
   return (
     <FetchContext.Provider value={fetchContext}>

@@ -10,6 +10,7 @@ const BannerOptionContext = createContext<BannerContext>(BANNER_CONTEXT)
 const BannerOptionProvider = ({ children }: ContextProps) => {
   const [data, setData] = useState<ArtistList | ArtistListError>(ERROR_DATA_ARTIST)
   const [dataReturn, setDataReturn] = useState<BannerContext>(BANNER_CONTEXT)
+  const [autor, setAutor] = useState('')
   const [loading, setLoading] = useState(false)
   const handleNewData = (id: number) => {
     setLoading(true)
@@ -27,13 +28,14 @@ const BannerOptionProvider = ({ children }: ContextProps) => {
   }
 
   useEffect(() => {
-    const dataUpdate = {
+    const dataUpdate: BannerContext = {
       handleNewData,
       loading,
       data,
+      autor,
+      setAutor
     }
     setDataReturn(dataUpdate)
-    console.log(data)
   }, [data, loading])
 
   return <BannerOptionContext.Provider value={dataReturn}>{children}</BannerOptionContext.Provider>

@@ -5,6 +5,8 @@ import * as style2 from '../../../styles/banner_option'
 import { ArtistList, ArtistListError } from '../../../interface/artistMusic'
 import { ARTIST_LIST } from '../../../constant/constant'
 import MusicContext from '../../../context/musicContext'
+import PlaceImage from '../../../assets/foxbel-music.png'
+
 const BannerOption = () => {
   const bannerOptionContext = useContext(BannerOptionContext)
   const [data, setData] = useState<ArtistList>(ARTIST_LIST)
@@ -25,7 +27,7 @@ const BannerOption = () => {
       <BannerOptionContext.Provider value={bannerOptionContext}>
         <style.SectionBanner>
           <style2.BannerOptionPrincipal>
-            <style2.BannerImagePrincipal src={data?.data[0]?.album.cover_xl ?? ''} alt='img' />
+            <style2.BannerImagePrincipal src={`${bannerOptionContext.autor}?timestamp=${Date.now()}` ?? PlaceImage} alt='img' />
           </style2.BannerOptionPrincipal>
           <style2.BannerOptions>
             {data.data.map((item, idx) => (

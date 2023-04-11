@@ -24,7 +24,7 @@ const CardResult = ({ data }: CardResultProps) => {
           </style.BoxImageOptions>
         </style.BoxImage>
         <style.HeadingMusic>{data.title_short}</style.HeadingMusic>
-        <style.TextAutor>{data.artist.name}</style.TextAutor>
+        <style.TextAutor>{data.artist?.name}</style.TextAutor>
       </style.CardResult>
     </MusicContext.Provider>
   )

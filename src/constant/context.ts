@@ -36,5 +36,9 @@ export const BANNER_CONTEXT:BannerContext  = {
   data: ERROR_DATA_ARTIST,
   handleNewData(){
     return
+  },
+  autor: '',
+  setAutor(){
+    return
   }
 }
