@@ -10,6 +10,7 @@ const CardResult = ({ data }: CardResultProps) => {
   const musicContext = useContext(MusicContext)
   const handleClick =(data: Daum)=>{
     musicContext.handleMusicNew(data)
+    musicContext.selectSome(false)
   }
   return (
     <MusicContext.Provider value={musicContext}>

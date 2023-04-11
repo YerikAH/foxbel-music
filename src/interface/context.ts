@@ -13,4 +13,6 @@ export interface RootMusic {
   handleMusicNew(dataProp: Daum): void
   handleAddAllData(data: Root): void
   allData: Root
+  bannerSpecial : boolean
+  selectSome(value: boolean): void
 }

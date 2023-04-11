@@ -12,6 +12,7 @@ const MusicProvider = ({ children }: ContextProps) => {
   const [dataMusic, setDataMusic] = useState<Daum | null>(null)
   const [allData, setAllData] = useState(CHART_INIT)
   const [indexMusic, setIndexMusic] = useState(0)
+  const [bannerSpecial, setBannerSpecial] = useState(false)
   const handleManager = (value: boolean) =>{
     if (indexMusic < allData.tracks.data.length && indexMusic >= 0) {
       setIndexMusic(value ? indexMusic + 1 : indexMusic - 1)
@@ -21,18 +22,21 @@ const MusicProvider = ({ children }: ContextProps) => {
   }
   const handleAddAllData = (dataRoot: Root) => setAllData(dataRoot)
   const handleMusicNew = (data: Daum) => setDataMusic(data)
+  const selectSome = (value: boolean) => setBannerSpecial(value)
 
   useEffect(() => {
     const generalMusic: RootMusic = {
       currentIndex: indexMusic,
       data: dataMusic,
-      handleManager: handleManager,
-      handleMusicNew: handleMusicNew,
-      handleAddAllData: handleAddAllData,
-      allData: allData
+      handleManager,
+      handleMusicNew,
+      handleAddAllData,
+      allData,
+      selectSome,
+      bannerSpecial
     }
     setData(generalMusic)
-  }, [indexMusic, dataMusic])
+  }, [indexMusic, dataMusic, bannerSpecial])
 
   return <MusicContext.Provider value={data}>{children}</MusicContext.Provider>
 }

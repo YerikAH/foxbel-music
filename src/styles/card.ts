@@ -76,7 +76,7 @@ export const TextAutor = styled.p`
 
 
 
-export const ButtonLink = styled.a`
+export const ButtonLink = styled.button`
   position: absolute;
   top: 0;
   left: 0%;

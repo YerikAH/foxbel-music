@@ -18,5 +18,9 @@ export const CONTEXT_MUSIC_INIT: RootMusic = {
   handleAddAllData(){
     return
   },
-  allData: CHART_INIT
+  allData: CHART_INIT,
+  selectSome() {
+    return
+  },
+  bannerSpecial: false
 }

@@ -18,7 +18,13 @@ const Page = () => {
     <>
       <MusicContext.Provider value={musicContext}>
         <NavigationMain />
-        {musicContext.data !== null ? <Banner /> : <BannerOption />}
+        {musicContext.bannerSpecial ? (
+          <BannerOption />
+        ) : musicContext.data !== null ? (
+          <Banner />
+        ) : (
+          <WidgetDeezer />
+        )}
         {location.pathname === PathRoutes.recent && <Recent />}
         {location.pathname === PathRoutes.artist && <Artist />}
         {location.pathname === PathRoutes.albums && <Album />}
