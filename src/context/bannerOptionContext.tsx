@@ -22,7 +22,7 @@ const BannerOptionProvider = ({ children }: ContextProps) => {
     if(option === OptionBanner.artist){
       musicArtist(id)
     }else{
-      musicAlbum
+      musicAlbum(id)
     }
   }
   function musicArtist(id: number){
@@ -71,6 +71,7 @@ const BannerOptionProvider = ({ children }: ContextProps) => {
       setAutor,
     }
     setDataReturn(dataUpdate)
+    console.log(data)
   }, [data, loading])
 
   return <BannerOptionContext.Provider value={dataReturn}>{children}</BannerOptionContext.Provider>

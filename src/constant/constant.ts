@@ -1,4 +1,5 @@
 import { AllOptions, PathRoutes, ResProps } from '../enum/enum'
+import { AlbumMusic } from '../interface/albumMusic'
 import { ArtistList } from '../interface/artistMusic'
 import { MenuOptions } from '../interface/interface'
 import { RootSearch } from '../interface/search'
@@ -43,5 +44,9 @@ export const LINK_LIBRARY: MenuOptions[] = [
 export const ARTIST_LIST: ArtistList = {
   data: [],
   next: '',
+  total: 0,
+}
+export const ALBUM_LIST: AlbumMusic = {
+  data:[],
   total: 0,
 }
