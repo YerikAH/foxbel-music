@@ -45,7 +45,7 @@ const BannerOption = () => {
             />
           </style2.BannerOptionPrincipal>
           <style2.BannerOptions>
-            {location.pathname === PathRoutes.artist &&
+            {location.pathname === PathRoutes.artist  &&
               data.data.map((item, idx) => (
                 <style2.BannerAllOptinos
                   key={idx}

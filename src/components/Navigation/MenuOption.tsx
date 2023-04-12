@@ -16,6 +16,7 @@ const MenuOption = () => {
     setNavData(newData)
   }, [location.pathname])
   
+  
   return (
     <style.NavigationMenu>
       <style.MenuListLink to='/' tabIndex={1}>
