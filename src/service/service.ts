@@ -62,5 +62,10 @@ const serviceApi = {
       })
     })
   },
+  album: (id: number): Promise<> =>{
+    return new Promise<>((resolve, reject) =>{
+      DZ.api(`/album/${id}/tracks`, response)
+    })
+  }
 }
 export default serviceApi
