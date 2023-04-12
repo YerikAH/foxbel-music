@@ -1,7 +1,7 @@
 export interface ArtistList {
   data: Datum[]
   total: number
-  next: string
+  next?: string
 }
 
 export interface Datum {

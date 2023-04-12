@@ -18,3 +18,7 @@ export enum PathRoutes{
   albums = '/albums',
   podcast = '/podcasts'
 }
+export enum OptionBanner{
+  artist = 'artist',
+  album = 'album'
+}

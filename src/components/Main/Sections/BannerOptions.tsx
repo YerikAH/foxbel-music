@@ -7,10 +7,14 @@ import { ARTIST_LIST } from '../../../constant/constant'
 import MusicContext from '../../../context/musicContext'
 import PlaceImage from '../../../assets/foxbel-music.png'
 import { ErrorRoot } from '../../../interface/error'
+import { AlbumMusic } from '../../../interface/albumMusic'
+import { useLocation } from 'react-router-dom'
+import { PathRoutes } from '../../../enum/enum'
 
 const BannerOption = () => {
   const bannerOptionContext = useContext(BannerOptionContext)
-  const [data, setData] = useState<ArtistList>(ARTIST_LIST)
+  const [data, setData] = useState<ArtistList | AlbumMusic>(ARTIST_LIST)
+  const location = useLocation()
   const musicContext = useContext(MusicContext)
   useEffect(() => {
     const dataError = bannerOptionContext.data as ErrorRoot
@@ -18,7 +22,7 @@ const BannerOption = () => {
       return
       // here code for the error
     } else {
-      const dataNotError = bannerOptionContext.data as ArtistList
+      const dataNotError = bannerOptionContext.data as ArtistList | AlbumMusic
       setData(dataNotError)
     }
   }, [bannerOptionContext.data])
@@ -31,7 +35,7 @@ const BannerOption = () => {
             <style2.BannerImagePrincipal src={`${bannerOptionContext.autor}?timestamp=${Date.now()}` ?? PlaceImage} alt='img' />
           </style2.BannerOptionPrincipal>
           <style2.BannerOptions>
-            {data.data.map((item, idx) => (
+            {location.pathname  === PathRoutes.artist && data.data.map((item, idx) => (
               <style2.BannerAllOptinos key={idx} onClick={() => musicContext.handleMusicNew(item)}>
                 <style2.BannerOptionsImage src={item.album.cover_xl} alt='music' />
                 <style2.BannerOptionInfo>
@@ -40,6 +44,7 @@ const BannerOption = () => {
                 </style2.BannerOptionInfo>
               </style2.BannerAllOptinos>
             ))}
+            {}
           </style2.BannerOptions>
         </style.SectionBanner>
       </BannerOptionContext.Provider>

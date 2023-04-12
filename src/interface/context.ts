@@ -1,5 +1,7 @@
-import { ArtistList, ArtistListError } from './artistMusic'
+import { AlbumMusic } from './albumMusic'
+import { ArtistList } from './artistMusic'
 import { Daum, Root } from './chart'
+import { ErrorRoot } from './error'
 
 export interface RootGeneral {
   root: Root | null
@@ -20,7 +22,7 @@ export interface RootMusic {
 
 export interface BannerContext {
   loading: boolean
-  data: ArtistList | ArtistListError
+  data: ArtistList | ErrorRoot | AlbumMusic
   handleNewData(id: number): void
   autor: string;
   setAutor: (nuevoAutor: string) => void;
