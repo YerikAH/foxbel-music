@@ -2,17 +2,18 @@ import { useContext, useEffect, useState } from 'react'
 import BannerOptionContext from '../../../context/bannerOptionContext'
 import * as style from '../../../styles/banner'
 import * as style2 from '../../../styles/banner_option'
-import { ArtistList, ArtistListError } from '../../../interface/artistMusic'
+import { ArtistList } from '../../../interface/artistMusic'
 import { ARTIST_LIST } from '../../../constant/constant'
 import MusicContext from '../../../context/musicContext'
 import PlaceImage from '../../../assets/foxbel-music.png'
+import { ErrorRoot } from '../../../interface/error'
 
 const BannerOption = () => {
   const bannerOptionContext = useContext(BannerOptionContext)
   const [data, setData] = useState<ArtistList>(ARTIST_LIST)
   const musicContext = useContext(MusicContext)
   useEffect(() => {
-    const dataError = bannerOptionContext.data as ArtistListError
+    const dataError = bannerOptionContext.data as ErrorRoot
     if (dataError.error) {
       return
       // here code for the error

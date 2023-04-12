@@ -10,11 +10,11 @@ const BannerInfo = ({ data, extra }: DetailsMusicProps) => {
   return (
     <PlayerContext.Provider value={playerContext}>
       <style.BoxAllContent>
-        <style.BoxImage className={data?.album.cover_xl ?? ''}></style.BoxImage>
+        <style.BoxImage className={data?.album?.cover_xl ?? ''}></style.BoxImage>
         <style.BoxContent>
-          <style.HeadlinePrincipal>{data?.artist.name ?? 'Error'}</style.HeadlinePrincipal>
+          <style.HeadlinePrincipal>{data?.artist?.name ?? 'Error'}</style.HeadlinePrincipal>
           <style.BoxFlexLinear>
-            <style.HeadlineSecondary>{data?.album.title ?? 'Error'}</style.HeadlineSecondary>
+            <style.HeadlineSecondary>{data?.album?.title ?? 'Error'}</style.HeadlineSecondary>
             <style.TextSpan>{data?.rank} seguidores</style.TextSpan>
           </style.BoxFlexLinear>
           <style.TextBody dangerouslySetInnerHTML={{ __html: extra ?? '' }}></style.TextBody>

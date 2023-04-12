@@ -13,7 +13,7 @@ const BannerAutor = ({ data }: DetailsMusicProps) => {
         <style.ButtonIconPlayer onClick={() => playerContext.handleClick()}>
           {playerContext.isPlaying ? <IconPause /> : <IconPlay />}
         </style.ButtonIconPlayer>
-        <style.ImageAutor src={data?.artist.picture_big ?? placeImage} alt='autor' />
+        <style.ImageAutor src={data?.artist?.picture_big ?? placeImage} alt='autor' />
       </style.BoxImageResponsive>
     </PlayerContext.Provider>
   )

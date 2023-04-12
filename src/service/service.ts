@@ -1,6 +1,8 @@
 import { WIKI_NOT_FOUND } from '../constant/data'
-import { ArtistList, ArtistListError } from '../interface/artistMusic'
-import {  Root } from '../interface/chart'
+import { AlbumMusic } from '../interface/albumMusic'
+import { ArtistList } from '../interface/artistMusic'
+import { Root } from '../interface/chart'
+import { ErrorRoot } from '../interface/error'
 import { RootSearch } from '../interface/search'
 import { SearchWiki, WikiNotFound } from '../interface/searchWiki'
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -51,10 +53,10 @@ const serviceApi = {
     })
   },
 
-  artist: (id: number): Promise<ArtistList | ArtistListError> => {
-    return new Promise<ArtistList | ArtistListError>((resolve, reject) => {
-      DZ.api(`/artist/${id}/top?limit=50`, (response: ArtistList | ArtistListError) => {
-        const artistTest = response as ArtistListError
+  artist: (id: number): Promise<ArtistList | ErrorRoot> => {
+    return new Promise<ArtistList | ErrorRoot>((resolve, reject) => {
+      DZ.api(`/artist/${id}/top?limit=50`, (response: ArtistList | ErrorRoot) => {
+        const artistTest = response as ErrorRoot
         if (artistTest.error) {
           return reject(response)
         }
@@ -62,10 +64,16 @@ const serviceApi = {
       })
     })
   },
-  album: (id: number): Promise<> =>{
-    return new Promise<>((resolve, reject) =>{
-      DZ.api(`/album/${id}/tracks`, response)
+  album: (id: number): Promise<AlbumMusic | ErrorRoot> => {
+    return new Promise<AlbumMusic | ErrorRoot>((resolve, reject) => {
+      DZ.api(`/album/${id}/tracks`, (response: ErrorRoot | AlbumMusic) => {
+        const albumTest = response as ErrorRoot
+        if (albumTest.error) {
+          return reject(response)
+        }
+        resolve(response)
+      })
     })
-  }
+  },
 }
 export default serviceApi
