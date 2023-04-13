@@ -6,13 +6,27 @@ export const NavigationMenu = styled.nav`
   width: 20.625rem;
   height: 100vh;
   padding: 3.125rem 2.5rem 10rem 2.5rem;
-  left: 0;
+  left: -100vw;
   top: 0;
+  z-index: 200;
   background-color: var(--dark-red);
   overflow: auto;
-  display: none;
+  transition: 0.3s;
   @media (min-width: 850px) {
-    display: block;
+     left: 0;
+  }
+`
+export const NavigationHam = styled.button`
+  display: block;
+  position: absolute;
+  z-index: 100;
+margin: 2.5rem 0.5rem;
+right: 0;
+top: 0;
+background-color: transparent;
+border:none;
+  @media (min-width: 850px) {
+    display: none;
   }
 `
 export const MenuBoxUl = styled.div`
@@ -60,6 +74,7 @@ export const MenuListButton = styled.button`
   color: var(--light-red-two);
   border-radius: 1rem;
   padding: 0.5rem ;
+  transition: 0.3s;
   &:hover{
     background-color: var(--soft-red-two);
   

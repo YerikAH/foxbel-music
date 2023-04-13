@@ -68,6 +68,10 @@ export const IconProfile = styled.button`
   place-items: center;
   border: none;
   background: transparent;
+  opacity: 0;
+  @media (min-width: 850px) {
+    opacity: 1;
+  }
 `
 export const TextProfile = styled.p`
   font: normal normal 400 1rem/1.5rem var(--font-principal);

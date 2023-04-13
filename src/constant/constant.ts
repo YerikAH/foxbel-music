@@ -1,7 +1,7 @@
 import { AllOptions, PathRoutes, ResProps } from '../enum/enum'
 import { AlbumMusic } from '../interface/albumMusic'
 import { ArtistList } from '../interface/artistMusic'
-import { MenuOptions } from '../interface/interface'
+import { MenuOptions, MenuStyles } from '../interface/interface'
 import { RootSearch } from '../interface/search'
 
 export const SEARCH_CONST: RootSearch = {
@@ -47,6 +47,10 @@ export const ARTIST_LIST: ArtistList = {
   total: 0,
 }
 export const ALBUM_LIST: AlbumMusic = {
-  data:[],
+  data: [],
   total: 0,
+}
+
+export const STYLE_MENU:MenuStyles = {
+  left: '-100vw',
 }

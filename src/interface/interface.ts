@@ -5,3 +5,6 @@ export interface MenuOptions{
     value: boolean,
     path: PathRoutes
 }
+export interface MenuStyles {
+    left: string
+}
