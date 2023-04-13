@@ -9,10 +9,12 @@ import { routeSearchMenu } from '../../helpers/helpers'
 import IconPlus from '../icons/IconPlus'
 import IconHam from '../icons/IconHam'
 import IconClose from '../icons/IconClose'
+import Modal from '../Main/Sections/Modal'
 const MenuOption = () => {
   const [navData, setNavData] = useState<MenuOptions[]>(LINK_LIBRARY)
   const location = useLocation()
   const [open, setOpen] = useState(false)
+  const [openModal, setOpenModal] = useState(false)
   const [styleOpen, setStyleOpen] = useState<MenuStyles>(STYLE_MENU)
 
   const handleClick = () => setOpen(!open)
@@ -53,12 +55,13 @@ const MenuOption = () => {
           </style.MenuUl>
           <style.MenuUl>
             <style.MenuLinkTitle>Playlist</style.MenuLinkTitle>
-            <style.MenuListButton>
+            <style.MenuListButton onClick={()=>setOpenModal(!open)}>
               <IconPlus />
               Crear playlist
             </style.MenuListButton>
           </style.MenuUl>
         </style.MenuBoxUl>
+        {openModal && <Modal setOpenModal={setOpenModal}/>}
       </style.NavigationMenu>
     </>
   )

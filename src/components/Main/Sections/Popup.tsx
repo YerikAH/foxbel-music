@@ -1,8 +1,12 @@
-import React from 'react'
+import * as style from '../../../styles/popup'
 
 const Popup = () => {
   return (
-    <div>Popup</div>
+    <style.PopupStyles>
+      <style.PopupList>Rock</style.PopupList>
+      <style.PopupList>Romantic</style.PopupList>
+      <style.PopupList>Electro</style.PopupList>
+    </style.PopupStyles>
   )
 }
 

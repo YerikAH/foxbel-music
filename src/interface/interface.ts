@@ -9,8 +9,15 @@ export interface MenuStyles {
     left: string
 }
 export interface ModalProps {
-    title: string
-    description: string
-    button: string
-    place: string
+    setOpenModal(openModal: boolean):void
+}
+export interface InterfacePlaylist {
+    name: string,
+    music: InterfaceMusic[]
+}
+export interface InterfaceMusic{
+    id: number,
+    image: string,
+    name: string,
+    autor: string
 }

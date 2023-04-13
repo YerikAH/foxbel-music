@@ -54,3 +54,4 @@ export const ALBUM_LIST: AlbumMusic = {
 export const STYLE_MENU:MenuStyles = {
   left: '-100vw',
 }
+export const PLAYLIST_STORAGE = 'FOXBEL_PLAYLIST'

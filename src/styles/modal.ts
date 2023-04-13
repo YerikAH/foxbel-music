@@ -7,7 +7,7 @@ export const ModalStyles = styled.div`
   z-index: 6000;
   overflow: auto;
   padding: 1rem;
-  background: #0001;
+  background:var(--black-opacity);
   top: 0;
   left: 0;
   display: grid;
