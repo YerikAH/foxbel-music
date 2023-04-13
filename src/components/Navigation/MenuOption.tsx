@@ -8,6 +8,7 @@ import { useLocation } from 'react-router-dom'
 import { routeSearchMenu } from '../../helpers/helpers'
 import IconPlus from '../icons/IconPlus'
 import IconHam from '../icons/IconHam'
+import IconClose from '../icons/IconClose'
 const MenuOption = () => {
   const [navData, setNavData] = useState<MenuOptions[]>(LINK_LIBRARY)
   const location = useLocation()
@@ -21,6 +22,8 @@ const MenuOption = () => {
     const newData = changeTrueValue(LINK_LIBRARY, select)
     setNavData(newData)
   }, [location.pathname])
+
+
   useEffect(() => {
     if (open) setStyleOpen({ left: '0' })
     else {
@@ -31,7 +34,7 @@ const MenuOption = () => {
   return (
     <>
       <style.NavigationHam onClick={handleClick}>
-        <IconHam />
+        {!open ? <IconHam /> : <IconClose />}
       </style.NavigationHam>
       <style.NavigationMenu style={styleOpen}>
         <style.MenuListLink to='/' tabIndex={1}>

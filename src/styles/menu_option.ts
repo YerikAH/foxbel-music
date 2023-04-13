@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const NavigationMenu = styled.nav`
   position: fixed;
-  width: 20.625rem;
+  width: 16.625rem;
   height: 100vh;
   padding: 3.125rem 2.5rem 10rem 2.5rem;
   left: -100vw;
@@ -14,6 +14,7 @@ export const NavigationMenu = styled.nav`
   transition: 0.3s;
   @media (min-width: 850px) {
      left: 0;
+     width: 20.625rem;
   }
 `
 export const NavigationHam = styled.button`
