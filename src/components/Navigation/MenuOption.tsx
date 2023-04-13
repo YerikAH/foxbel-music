@@ -34,10 +34,9 @@ const MenuOption = () => {
   }, [open])
 
   useEffect(() => {
-    let data: InterfacePlaylist[] = []
     const playList = localStorage.getItem(PLAYLIST_STORAGE)
     if (playList !== null) {
-      data = JSON.parse(playList)
+      const data: InterfacePlaylist[] = JSON.parse(playList)
       setPlayList(data)
     }
   }, [localStorage.getItem(PLAYLIST_STORAGE)])

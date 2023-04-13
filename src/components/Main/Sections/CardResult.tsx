@@ -7,20 +7,29 @@ import IconPlay from '../../icons/IconPlay'
 import { Daum } from '../../../interface/chart'
 import Popup from './Popup'
 
+import { InterfaceMusic } from '../../../interface/interface'
+
 
 const CardResult = ({ data }: CardResultProps) => {
   const musicContext = useContext(MusicContext)
   const [open, setOpen] = useState(false)
   const handlePopup = () => setOpen(!open)
-
+  
   const handleClick =(data: Daum)=>{
     musicContext.handleMusicNew(data)
     musicContext.selectSome(false)
   }
+  const dataPopup:InterfaceMusic = {
+    autor: data.artist?.name ?? '',
+    id: data.id,
+    image: data.album?.cover_xl ?? '',
+    name: data.title
+  }
+
   return (
     <MusicContext.Provider value={musicContext}>
       <style.CardResult>
-      {open && <Popup/>}
+      {open && <Popup data={dataPopup}/>}
         <style.BoxImage className={data.album?.cover_big}>
           <style.BoxImageButton onClick={()=>handleClick(data)}>
             <IconPlay />

@@ -25,6 +25,7 @@ const Modal = ({setOpenModal}:ModalProps) => {
       data.push(createPlaylist)
     }
     localStorage.setItem(PLAYLIST_STORAGE,JSON.stringify(data))
+    setOpenModal(false)
   }
   return ReactDOM.createPortal(
     <style.ModalStyles>
