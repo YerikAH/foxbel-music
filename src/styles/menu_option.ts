@@ -39,9 +39,10 @@ export const ImageLogo = styled.img``
 export const MenuLinkTitle = styled.h5`
   font: normal normal 700 1.5rem/2rem var(--font-principal);
   color: var(--white);
+  margin-bottom:${props => props.className && ' 1.6rem'};
 `
 export const MenuUl = styled.ul`
-  gap: 0.8rem;
+  gap: ${props => props.className === 'separate' && ' 0.8rem'};
   display: grid;
 `
 export const MenuList = styled.li`
@@ -63,6 +64,21 @@ export const MenuListLink = styled(Link)`
     left: -2.5rem;
   }
 `
+export const ListPlaylist = styled.button`
+  width: 100%;
+  font: normal normal 400 1rem/2rem var(--font-principal);
+  color:  var(--white);
+  display: flex;
+  border: none;
+  background-color: transparent;
+  opacity: 0.7;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem ;
+  &:hover{
+    background-color: #fff2;
+  }
+`
+
 export const MenuListButton = styled.button`
   background: transparent;
   border: none;

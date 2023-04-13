@@ -1,9 +1,9 @@
 import * as style from '../../styles/menu_option'
 import logo from '../../assets/foxbel-music.png'
-import { MenuOptions, MenuStyles } from '../../interface/interface'
+import { InterfacePlaylist, MenuOptions, MenuStyles } from '../../interface/interface'
 import { changeTrueValue } from '../../helpers/changeTrueValue'
 import { useEffect, useState } from 'react'
-import { LINK_LIBRARY, STYLE_MENU } from '../../constant/constant'
+import { LINK_LIBRARY, PLAYLIST_STORAGE, STYLE_MENU } from '../../constant/constant'
 import { useLocation } from 'react-router-dom'
 import { routeSearchMenu } from '../../helpers/helpers'
 import IconPlus from '../icons/IconPlus'
@@ -16,6 +16,7 @@ const MenuOption = () => {
   const [open, setOpen] = useState(false)
   const [openModal, setOpenModal] = useState(false)
   const [styleOpen, setStyleOpen] = useState<MenuStyles>(STYLE_MENU)
+  const [playList, setPlayList] = useState<InterfacePlaylist[]>([])
 
   const handleClick = () => setOpen(!open)
 
@@ -25,13 +26,21 @@ const MenuOption = () => {
     setNavData(newData)
   }, [location.pathname])
 
-
   useEffect(() => {
     if (open) setStyleOpen({ left: '0' })
     else {
       setStyleOpen({ left: '-100vw' })
     }
   }, [open])
+
+  useEffect(() => {
+    let data: InterfacePlaylist[] = []
+    const playList = localStorage.getItem(PLAYLIST_STORAGE)
+    if (playList !== null) {
+      data = JSON.parse(playList)
+      setPlayList(data)
+    }
+  }, [localStorage.getItem(PLAYLIST_STORAGE)])
 
   return (
     <>
@@ -43,7 +52,7 @@ const MenuOption = () => {
           <style.ImageLogo src={logo} alt='logo' />
         </style.MenuListLink>
         <style.MenuBoxUl>
-          <style.MenuUl>
+          <style.MenuUl className='separate'>
             <style.MenuLinkTitle>Mi Librería</style.MenuLinkTitle>
             {navData.map((item, idx) => (
               <style.MenuList key={idx}>
@@ -54,14 +63,19 @@ const MenuOption = () => {
             ))}
           </style.MenuUl>
           <style.MenuUl>
-            <style.MenuLinkTitle>Playlist</style.MenuLinkTitle>
-            <style.MenuListButton onClick={()=>setOpenModal(!open)}>
+            <style.MenuLinkTitle className='bottom'>Playlist</style.MenuLinkTitle>
+            {playList.map((item, idx) => (
+              <style.ListPlaylist key={idx} tabIndex={1}>
+                {item.name}
+              </style.ListPlaylist>
+            ))}
+            <style.MenuListButton onClick={() => setOpenModal(!open)}>
               <IconPlus />
               Crear playlist
             </style.MenuListButton>
           </style.MenuUl>
         </style.MenuBoxUl>
-        {openModal && <Modal setOpenModal={setOpenModal}/>}
+        {openModal && <Modal setOpenModal={setOpenModal} />}
       </style.NavigationMenu>
     </>
   )
