@@ -5,7 +5,7 @@ import ButtonsPlayer from './ButtonsPlayer'
 import DetailsMusic from './DetailsMusic'
 import VolumenSettings from './VolumenSettings'
 import MusicContext from '../../context/musicContext'
-import { Daum } from '../../interface/search'
+import { Daum } from '../../interface/chart'
 
 const PlayerMusic = () => {
   const [musicSelect, setMusicSelect] = useState<Daum | null>(null)

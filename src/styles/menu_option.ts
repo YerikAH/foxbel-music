@@ -8,12 +8,12 @@ export const NavigationMenu = styled.nav`
   padding: 3.125rem 2.5rem 10rem 2.5rem;
   left: -100vw;
   top: 0;
-  z-index: 200;
+  z-index: 2000;
   background-color: var(--dark-red);
   overflow: auto;
   transition: 0.3s;
   @media (min-width: 850px) {
-     left: 0;
+     left: 0 !important;
      width: 20.625rem;
   }
 `

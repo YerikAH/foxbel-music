@@ -8,6 +8,9 @@ export const PlayerMusicStyle = styled.footer`
   width: 100vw;
   background: var(--light-red);
   z-index: 500;
+    @media (min-width: 850px) {
+     z-index: 5000;
+  }
 `
 
 export const MusicStyleContent = styled.div`
@@ -88,8 +91,10 @@ export const PlayerTimerBox = styled.div`
   position: relative;
   margin-top: -0.5rem;
   width: 200px;
+  display: none;
   @media (min-width: 720px) {
     width: 400px;
+    display: block;
   }
 `
 export const PlayerButtons = styled.div`

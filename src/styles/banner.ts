@@ -7,7 +7,6 @@ export const SectionBanner = styled.section`
   margin: 0 auto;
   overflow: hidden;
   position: relative;
-  border-radius: 2rem;
   @media (min-width: 850px) {
     grid-template-columns: 250px auto;
   }
