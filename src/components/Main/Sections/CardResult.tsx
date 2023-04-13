@@ -5,6 +5,7 @@ import MusicContext from '../../../context/musicContext'
 import IconDots from '../../icons/IconDots'
 import IconPlay from '../../icons/IconPlay'
 import { Daum } from '../../../interface/chart'
+import Modal from './Modal'
 
 const CardResult = ({ data }: CardResultProps) => {
   const musicContext = useContext(MusicContext)

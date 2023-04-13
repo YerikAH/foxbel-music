@@ -8,3 +8,9 @@ export interface MenuOptions{
 export interface MenuStyles {
     left: string
 }
+export interface ModalProps {
+    title: string
+    description: string
+    button: string
+    place: string
+}
