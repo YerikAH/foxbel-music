@@ -10,8 +10,14 @@ const BannerOptionRender = () => {
     <MusicContext.Provider value={musicContext}>
       <BannerOptionContext.Provider value={bannerOptionContext}>
         <style2.BannerOptions>
-          {bannerOptionContext.loading ? (
-            <Loader />
+          {!bannerOptionContext.loading ? (
+            <style2.BannerLoad>
+
+              <Loader />
+              <style2.BannerLoadText>
+                Cargando . . .
+              </style2.BannerLoadText>
+            </style2.BannerLoad>
           ) : (
             <>
               {bannerOptionContext.renderAlbum.data.map((item, idx) => (

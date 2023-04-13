@@ -31,7 +31,7 @@ export const BannerAllOptinos = styled.button`
   background: transparent;
   padding: 0.2rem 0.5rem;
   gap: 1rem;
-  &:hover{
+  &:hover {
     background: #0001;
   }
 `
@@ -64,4 +64,16 @@ export const BannerAutor = styled.p`
   white-space: nowrap;
   max-width: 10rem;
   width: 100%;
+`
+export const BannerLoad = styled.div`
+  display: grid;
+  place-items: center;
+  place-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 0.5rem;
+`
+export const BannerLoadText = styled.p`
+  font: normal normal 600 0.9rem/1rem var(--font-principal);
+  color: var(--soft-gray);
 `
