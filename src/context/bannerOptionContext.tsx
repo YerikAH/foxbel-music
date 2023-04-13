@@ -78,8 +78,7 @@ const BannerOptionProvider = ({ children }: ContextProps) => {
       renderArtist
     }
     setDataReturn(dataUpdate)
-    console.log(data)
-  }, [data, loading])
+  }, [data, loading, renderAlbum, renderArtist, autor, ])
 
   return <BannerOptionContext.Provider value={dataReturn}>{children}</BannerOptionContext.Provider>
 }
