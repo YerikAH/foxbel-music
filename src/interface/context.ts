@@ -26,4 +26,8 @@ export interface BannerContext {
   handleNewData(id: number): void
   autor: string;
   setAutor: (nuevoAutor: string) => void;
+  setRenderAlbum:(data: AlbumMusic) => void;
+  setRenderArtist:(data: ArtistList) => void;
+  renderArtist: ArtistList;
+  renderAlbum: AlbumMusic
 }

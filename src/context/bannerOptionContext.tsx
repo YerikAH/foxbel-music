@@ -8,6 +8,7 @@ import { ErrorRoot } from '../interface/error'
 import { AlbumMusic } from '../interface/albumMusic'
 import { OptionBanner, PathRoutes } from '../enum/enum'
 import { useLocation } from 'react-router-dom'
+import { ALBUM_LIST, ARTIST_LIST } from '../constant/constant'
 
 const BannerOptionContext = createContext<BannerContext>(BANNER_CONTEXT)
 
@@ -18,6 +19,8 @@ const BannerOptionProvider = ({ children }: ContextProps) => {
   const [loading, setLoading] = useState(false)
   const location = useLocation()
   const [option, setOption] = useState<OptionBanner>(OptionBanner.artist)
+  const [renderArtist, setRenderArtist] = useState(ARTIST_LIST)
+  const [renderAlbum, setRenderAlbum] = useState(ALBUM_LIST)
   const handleNewData = (id: number) => {
     if(option === OptionBanner.artist){
       musicArtist(id)
@@ -69,6 +72,10 @@ const BannerOptionProvider = ({ children }: ContextProps) => {
       data,
       autor,
       setAutor,
+      setRenderArtist,
+      setRenderAlbum,
+      renderAlbum,
+      renderArtist
     }
     setDataReturn(dataUpdate)
     console.log(data)

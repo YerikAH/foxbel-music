@@ -3,6 +3,7 @@ import MusicContext from '../../../context/musicContext'
 import { CardArtistProps } from '../../../interface/props'
 import * as style from '../../../styles/card'
 import BannerOptionContext from '../../../context/bannerOptionContext'
+import { ALBUM_LIST } from '../../../constant/constant'
 
 const CardArtist = ({ data }: CardArtistProps) => {
   const musicContext = useContext(MusicContext)
@@ -11,6 +12,7 @@ const CardArtist = ({ data }: CardArtistProps) => {
     musicContext.selectSome(true)
     bannerOptionContext.handleNewData(id)
     bannerOptionContext.setAutor(autor)
+    bannerOptionContext.setRenderAlbum(ALBUM_LIST)
 
   }
   return (
