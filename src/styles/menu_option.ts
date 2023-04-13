@@ -48,3 +48,20 @@ export const MenuListLink = styled(Link)`
     left: -2.5rem;
   }
 `
+export const MenuListButton = styled.button`
+  background: transparent;
+  border: none;
+  font: normal normal 700 1rem/2rem var(--font-principal);
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  color: var(--light-red-two);
+  border-radius: 1rem;
+  padding: 0.5rem ;
+  &:hover{
+    background-color: var(--soft-red-two);
+  
+  }
+`

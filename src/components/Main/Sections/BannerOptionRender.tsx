@@ -10,7 +10,7 @@ const BannerOptionRender = () => {
     <MusicContext.Provider value={musicContext}>
       <BannerOptionContext.Provider value={bannerOptionContext}>
         <style2.BannerOptions>
-          {!bannerOptionContext.loading ? (
+          {bannerOptionContext.loading ? (
             <style2.BannerLoad>
 
               <Loader />

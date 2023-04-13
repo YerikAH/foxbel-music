@@ -5,7 +5,8 @@ import { changeTrueValue } from '../../helpers/changeTrueValue'
 import { useEffect, useState } from 'react'
 import { LINK_LIBRARY } from '../../constant/constant'
 import { useLocation } from 'react-router-dom'
-import {  routeSearchMenu } from '../../helpers/helpers'
+import { routeSearchMenu } from '../../helpers/helpers'
+import IconPlus from '../icons/IconPlus'
 const MenuOption = () => {
   const [navData, setNavData] = useState<MenuOptions[]>(LINK_LIBRARY)
   const location = useLocation()
@@ -15,8 +16,7 @@ const MenuOption = () => {
     const newData = changeTrueValue(LINK_LIBRARY, select)
     setNavData(newData)
   }, [location.pathname])
-  
-  
+
   return (
     <style.NavigationMenu>
       <style.MenuListLink to='/' tabIndex={1}>
@@ -35,6 +35,10 @@ const MenuOption = () => {
         </style.MenuUl>
         <style.MenuUl>
           <style.MenuLinkTitle>Playlist</style.MenuLinkTitle>
+          <style.MenuListButton>
+            <IconPlus />
+            Crear playlist
+          </style.MenuListButton>
         </style.MenuUl>
       </style.MenuBoxUl>
     </style.NavigationMenu>

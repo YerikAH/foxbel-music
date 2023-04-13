@@ -43,7 +43,7 @@ const NavigationMain = () => {
       </style.SearchStyles>
       <style.IconProfile>
         <IconUser />
-        <style.TextProfile>Harvey V.</style.TextProfile>
+        <style.TextProfile>Usuario</style.TextProfile>
       </style.IconProfile>
     </style.NavigationMainStyle>
   )
