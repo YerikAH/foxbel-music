@@ -24,3 +24,8 @@ export interface InterfaceMusic {
 export interface PopupProps {
   data: InterfaceMusic
 }
+export interface WarningProps {
+  setWarning(warning: boolean): void
+  playList: InterfacePlaylist[]
+  name: string
+}

@@ -8,7 +8,7 @@ export const NavigationMenu = styled.nav`
   padding: 3.125rem 2.5rem 10rem 2.5rem;
   left: -100vw;
   top: 0;
-  z-index: 2000;
+  z-index: 7000;
   background-color: var(--dark-red);
   overflow: auto;
   transition: 0.3s;
@@ -86,7 +86,7 @@ export const ListPlaylist = styled.button`
     }
   }
 `
-export const ListPlaylistText = styled.p`
+export const ListPlaylistText = styled.button`
   font: normal normal 400 1rem/2rem var(--font-principal);
   color:  var(--white);
   max-width: 10rem;
@@ -95,7 +95,8 @@ export const ListPlaylistText = styled.p`
   text-overflow: ellipsis;
   white-space: nowrap;
   text-align: left;
-
+  border: none;
+  background-color: transparent;
 `
 
 export const MenuListButton = styled.button`

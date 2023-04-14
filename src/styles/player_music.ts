@@ -9,7 +9,7 @@ export const PlayerMusicStyle = styled.footer`
   background: var(--light-red);
   z-index: 500;
     @media (min-width: 850px) {
-     z-index: 5000;
+     z-index: 9000;
   }
 `
 

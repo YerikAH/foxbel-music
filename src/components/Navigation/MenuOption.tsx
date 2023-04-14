@@ -13,6 +13,7 @@ import Modal from '../Main/Sections/Modal'
 import Playlist from '../Main/Sections/Playlist'
 import LocalStorageContext from '../../context/localStorageContext'
 import IconTrash from '../icons/IconTrash'
+import ModalWarning from '../Main/Sections/ModalWarning'
 const MenuOption = () => {
   const [navData, setNavData] = useState<MenuOptions[]>(LINK_LIBRARY)
   const location = useLocation()
@@ -24,6 +25,8 @@ const MenuOption = () => {
   const handleClick = () => setOpen(!open)
   const [dataFilter, setDataFilter] = useState<InterfacePlaylist>(VARIABLE)
   const localStorageContext = useContext(LocalStorageContext)
+  const [warning, setWarning] = useState(false)
+  const [nameComponent, setNameComponent] = useState('')
 
   const handleFilter = (name: string) => {
     const match: InterfacePlaylist | undefined = playList.find((item) => item.name === name)
@@ -32,7 +35,12 @@ const MenuOption = () => {
     }
     setOpenMusic(true)
   }
+  const handleRemove = (name: string) => {
+    setNameComponent(name)
+    setWarning(true)
+  }
 
+  
   useEffect(() => {
     const select = routeSearchMenu(location.pathname)
     const newData = changeTrueValue(LINK_LIBRARY, select)
@@ -79,9 +87,9 @@ const MenuOption = () => {
           <style.MenuUl>
             <style.MenuLinkTitle className='bottom'>Playlist</style.MenuLinkTitle>
             {playList.map((item, idx) => (
-              <style.ListPlaylist key={idx} tabIndex={1} onClick={() => handleFilter(item.name)}>
-                <style.ListPlaylistText>{item.name}</style.ListPlaylistText>
-                <style.ListPlaylistRemove>
+              <style.ListPlaylist key={idx} >
+                <style.ListPlaylistText  onClick={() => handleFilter(item.name)} tabIndex={1}>{item.name}</style.ListPlaylistText>
+                <style.ListPlaylistRemove onClick={()=> handleRemove(item.name)} tabIndex={1}>
                   <IconTrash />
                 </style.ListPlaylistRemove>
               </style.ListPlaylist>
@@ -94,6 +102,7 @@ const MenuOption = () => {
         </style.MenuBoxUl>
         {openModal && <Modal setOpenModal={setOpenModal} />}
         {openMusic && <Playlist setOpenMusic={setOpenMusic} data={dataFilter} />}
+        {warning && <ModalWarning playList={playList} name={nameComponent} setWarning={setWarning}/>}
       </style.NavigationMenu>
     </>
   )

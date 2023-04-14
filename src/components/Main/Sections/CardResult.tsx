@@ -18,8 +18,7 @@ const CardResult = ({ data }: CardResultProps) => {
   const localStorageContext = useContext(LocalStorageContext)
   const [openModal, setOpenModal] = useState(false)
   const handlePopup = () =>{ 
-    console.log(localStorageContext.localStorageValue)
-    if(localStorageContext.localStorageValue === null){
+    if(localStorageContext.localStorageValue === null || localStorageContext.localStorageValue.length === 2){
       setOpenModal(true)
       return
     }

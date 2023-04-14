@@ -39,8 +39,7 @@ const Modal = ({setOpenModal}:ModalProps) => {
         </style.ButtonClose>
         <style.TitleModal>Crear Playlist</style.TitleModal>
         <style.DescriptionModal>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sunt perferendis fugit
-          necessitatibus deserunt eius odit possimus sapiente similique soluta fugiat.
+        ¡Crea tu propia banda sonora! Crea una playlist personalizada con tus canciones favoritas.
         </style.DescriptionModal>
         <style.FormModal>
           <style.InputText placeholder='Nombre playlist' value={input} onChange={(e)=>setInput(e.target.value)} />
