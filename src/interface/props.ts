@@ -1,4 +1,5 @@
 import { Daum, Daum2, Daum3, Daum5 } from './chart';
+import { InterfacePlaylist } from './interface';
 import { RootSearch } from './search';
 
 export interface CardResultProps {
@@ -31,4 +32,8 @@ export interface VolumeMusicProps{
 export interface SearchProps{
     data:RootSearch | null
     loader: boolean
+}
+export interface PlaylistProps{
+    data: InterfacePlaylist
+    setOpenMusic(openMusic: boolean): void
 }

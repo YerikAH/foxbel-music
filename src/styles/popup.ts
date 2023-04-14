@@ -30,4 +30,5 @@ export const PopupList = styled.button`
 export const PopupText = styled.p`
   font: normal normal 600 0.7rem/1rem var(--font-principal);
   color: var(--black-100);
+  padding: 0 0.5rem;
 `

@@ -24,7 +24,7 @@ const Popup = ({data}:PopupProps) => {
       {playList.map((item, idx) => (
         <style.PopupList key={idx} onClick={()=>handleClick(item.name, data)}>{item.name}</style.PopupList>
       ))}
-      {playList.length === 0 && <style.PopupText>No tienes un playlist.</style.PopupText> }
+      {playList.length === 0 && <style.PopupText>Crea un playlist</style.PopupText> }
     </style.PopupStyles>
   )
 }

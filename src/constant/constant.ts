@@ -1,7 +1,7 @@
 import { AllOptions, PathRoutes, ResProps } from '../enum/enum'
 import { AlbumMusic } from '../interface/albumMusic'
 import { ArtistList } from '../interface/artistMusic'
-import { MenuOptions, MenuStyles } from '../interface/interface'
+import { InterfacePlaylist, MenuOptions, MenuStyles } from '../interface/interface'
 import { RootSearch } from '../interface/search'
 
 export const SEARCH_CONST: RootSearch = {
@@ -55,3 +55,7 @@ export const STYLE_MENU:MenuStyles = {
   left: '-100vw',
 }
 export const PLAYLIST_STORAGE = 'FOXBEL_PLAYLIST'
+export const VARIABLE : InterfacePlaylist = {
+  music: [],
+  name: ''
+}
