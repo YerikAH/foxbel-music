@@ -3,6 +3,7 @@ import { elementHtmlSelect } from '../../../helpers/helpers'
 import * as style from '../../../styles/playlist'
 import IconClose from '../../icons/IconClose'
 import { PlaylistProps } from '../../../interface/props'
+import NotPlaylist from './NotPlaylist'
 
 const Playlist = ({data,setOpenMusic}:PlaylistProps) => {
   const playlistHTML = document.getElementById('playlist')
@@ -25,7 +26,9 @@ const Playlist = ({data,setOpenMusic}:PlaylistProps) => {
           </style.PlaylistOption>
           ))}
 
+
         </style.PlaylistAllOptions>
+          {data.music.length === 0 && <NotPlaylist/>}
       </style.PlaylistCenter>
     </style.PlaylistStyle>,
     elementHtmlSelect(playlistHTML, 'playlist'),

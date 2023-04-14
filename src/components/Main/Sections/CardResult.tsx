@@ -47,7 +47,6 @@ const CardResult = ({ data }: CardResultProps) => {
           </style.BoxImageButton>
           <style.BoxImageOptions onClick={handlePopup}>
             <IconDots />
-  
           </style.BoxImageOptions>
         </style.BoxImage>
         <style.HeadingMusic>{data.title_short}</style.HeadingMusic>

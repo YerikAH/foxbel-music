@@ -86,3 +86,19 @@ export const ButtonClose = styled.button`
   background-color: transparent;
   border: none;
 `
+export const NotPlaylistStyle = styled.div`
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-content: center;
+  place-items: center;
+  padding: 1rem;
+`
+export const NotPlaylistText = styled.p`
+  font: normal normal 500 0.8rem/1.5rem var(--font-principal);
+  color: var(--soft-gray);
+  text-align: center;
+  margin-top: 1rem;
+  max-width: 20rem;
+
+`

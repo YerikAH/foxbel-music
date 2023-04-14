@@ -101,6 +101,8 @@ export const BoxButtons = styled.div`
   display: flex;
   gap: 1.25rem;
   margin-top: 3.625rem;
+  position: relative;
+  max-width: 20rem;
 `
 export const ButtonStroker = styled.button`
   border-radius: 15rem;

@@ -23,7 +23,7 @@ export const CardResult = styled.div`
   max-width: 7rem;
   width: 100%;
   position: relative;
-  overflow: hidden;
+ z-index: 500;
   transition: 0.3s;
   @media (min-width: 720px) {
     max-width: 10rem;
