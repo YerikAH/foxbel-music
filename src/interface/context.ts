@@ -31,3 +31,9 @@ export interface BannerContext {
   renderArtist: ArtistList;
   renderAlbum: AlbumMusic
 }
+
+export interface LocalStorageContextInterface {
+  localStorageValue: string | null,
+  setLocalStorageValue(localStorageValue: string): void
+  handleLocalStorageChange(): void
+}

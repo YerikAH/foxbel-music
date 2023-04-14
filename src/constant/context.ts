@@ -1,4 +1,4 @@
-import { BannerContext, RootGeneral, RootMusic } from '../interface/context'
+import { BannerContext, LocalStorageContextInterface, RootGeneral, RootMusic } from '../interface/context'
 import { CHART_INIT } from './chart'
 import { ALBUM_LIST, ARTIST_LIST } from './constant'
 
@@ -51,5 +51,12 @@ export const BANNER_CONTEXT: BannerContext = {
     return
   },
   renderAlbum: ALBUM_LIST,
-  renderArtist: ARTIST_LIST
+  renderArtist: ARTIST_LIST,
+}
+export const LOCALSTORAGE_CONTEXT: LocalStorageContextInterface = {
+  localStorageValue: null,
+  setLocalStorageValue() {
+    return
+  },
+  handleLocalStorageChange(){return}
 }

@@ -23,6 +23,9 @@ export const PopupList = styled.button`
   padding: 0.1rem 0.5rem;
   text-align: left;
   width: 100%;
+  white-space: nowrap;
+overflow: hidden;
+text-overflow: ellipsis;
   &:hover{
     background-color: var(--black-10);
   }

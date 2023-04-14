@@ -8,12 +8,24 @@ import { Daum } from '../../../interface/chart'
 import Popup from './Popup'
 
 import { InterfaceMusic } from '../../../interface/interface'
+import Modal from './Modal'
+import LocalStorageContext from '../../../context/localStorageContext'
 
 
 const CardResult = ({ data }: CardResultProps) => {
   const musicContext = useContext(MusicContext)
   const [open, setOpen] = useState(false)
-  const handlePopup = () => setOpen(!open)
+  const localStorageContext = useContext(LocalStorageContext)
+  const [openModal, setOpenModal] = useState(false)
+  const handlePopup = () =>{ 
+    console.log(localStorageContext.localStorageValue)
+    if(localStorageContext.localStorageValue === null){
+      setOpenModal(true)
+      return
+    }
+    setOpen(!open)
+  
+  }
   
   const handleClick =(data: Daum)=>{
     musicContext.handleMusicNew(data)
@@ -41,7 +53,9 @@ const CardResult = ({ data }: CardResultProps) => {
         </style.BoxImage>
         <style.HeadingMusic>{data.title_short}</style.HeadingMusic>
         <style.TextAutor>{data.artist?.name}</style.TextAutor>
+                {openModal && <Modal setOpenModal={setOpenModal} />}
       </style.CardResult>
+
     </MusicContext.Provider>
   )
 }

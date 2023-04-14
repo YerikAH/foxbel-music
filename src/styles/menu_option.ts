@@ -64,11 +64,16 @@ export const MenuListLink = styled(Link)`
     left: -2.5rem;
   }
 `
+export const ListPlaylistRemove = styled.button`
+  background-color: transparent;
+  border: none;
+  display: none;
+`
 export const ListPlaylist = styled.button`
   width: 100%;
-  font: normal normal 400 1rem/2rem var(--font-principal);
-  color:  var(--white);
+
   display: flex;
+  justify-content: space-between;
   border: none;
   background-color: transparent;
   opacity: 0.7;
@@ -76,7 +81,21 @@ export const ListPlaylist = styled.button`
   padding: 0.5rem 1rem ;
   &:hover{
     background-color: #fff2;
+    & button{
+        display: block;
+    }
   }
+`
+export const ListPlaylistText = styled.p`
+  font: normal normal 400 1rem/2rem var(--font-principal);
+  color:  var(--white);
+  max-width: 10rem;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+
 `
 
 export const MenuListButton = styled.button`

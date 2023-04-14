@@ -19,6 +19,8 @@ export const PlaylistCenter = styled.div`
   position: relative;
   width: 100%;
   max-width: 40rem;
+    height: 30rem;
+  overflow: auto;
   border-radius: 0.5rem;
 `
 export const PlaylistTitle = styled.h2`
@@ -26,6 +28,10 @@ export const PlaylistTitle = styled.h2`
   color: var(--light-red-two);
   text-align: left;
   margin-bottom: 0.5rem;
+  white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
+max-width: 12rem;
 `
 export const PlaylistAllOptions = styled.div`
   display: grid;
@@ -55,7 +61,9 @@ export const PlaylistTitleMusic = styled.h2`
   white-space: nowrap;
   max-width: 10rem;
   width: 100%;
-
+  white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
 `
 export const PlaylistAutor = styled.p`
   font: normal normal 400 0.8rem/1.2rem var(--font-principal);
@@ -66,6 +74,9 @@ export const PlaylistAutor = styled.p`
   white-space: nowrap;
   max-width: 10rem;
   width: 100%;
+    white-space: nowrap;
+text-overflow: ellipsis;
+overflow: hidden;
 `
 export const ButtonClose = styled.button`
   position: absolute;

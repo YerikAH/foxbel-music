@@ -3,12 +3,15 @@ import * as style from '../../../styles/modal'
 import IconClose from '../../icons/IconClose'
 import { elementHtmlSelect } from '../../../helpers/helpers'
 import { InterfacePlaylist, ModalProps } from '../../../interface/interface'
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { PLAYLIST_STORAGE } from '../../../constant/constant'
+import LocalStorageContext from '../../../context/localStorageContext'
 
 const Modal = ({setOpenModal}:ModalProps) => {
   const modalHTML = document.getElementById('modal')
   const [input, setInput] = useState('')
+  const localStorageContext = useContext(LocalStorageContext)
+  
   const handleClick = (e:React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
     e.preventDefault()
     const createPlaylist:InterfacePlaylist = {
@@ -26,6 +29,7 @@ const Modal = ({setOpenModal}:ModalProps) => {
     }
     localStorage.setItem(PLAYLIST_STORAGE,JSON.stringify(data))
     setOpenModal(false)
+    localStorageContext.handleLocalStorageChange()
   }
   return ReactDOM.createPortal(
     <style.ModalStyles>

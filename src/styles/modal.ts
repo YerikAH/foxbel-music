@@ -20,6 +20,7 @@ export const ModalCenter = styled.div`
   width: 100%;
   max-width: 25rem;
   border-radius: 0.5rem;
+
 `
 export const TitleModal = styled.h1`
   font: normal normal 600 1.2rem/1.5rem var(--font-principal);
