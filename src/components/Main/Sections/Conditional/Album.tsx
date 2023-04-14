@@ -1,5 +1,5 @@
-import * as style from '../../../styles/main'
-import SectionCard from './SectionCard'
+import * as style from '../../../../styles/main'
+import SectionCard from '../Card/SectionCard'
 
 const Album = () => {
   return (

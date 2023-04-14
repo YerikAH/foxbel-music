@@ -1,15 +1,15 @@
 import { useContext, useState } from 'react'
-import { CardResultProps } from '../../../interface/props'
-import * as style from '../../../styles/card'
-import MusicContext from '../../../context/musicContext'
-import IconDots from '../../icons/IconDots'
-import IconPlay from '../../icons/IconPlay'
-import { Daum } from '../../../interface/chart'
-import Popup from './Popup'
+import { CardResultProps } from '../../../../interface/props'
+import * as style from '../../../../styles/card'
+import MusicContext from '../../../../context/musicContext'
+import IconDots from '../../../icons/IconDots'
+import IconPlay from '../../../icons/IconPlay'
+import { Daum } from '../../../../interface/chart'
+import Popup from '../Float/Popup'
 
-import { InterfaceMusic } from '../../../interface/interface'
-import Modal from './Modal'
-import LocalStorageContext from '../../../context/localStorageContext'
+import { InterfaceMusic } from '../../../../interface/interface'
+import Modal from '../Float/Modal'
+import LocalStorageContext from '../../../../context/localStorageContext'
 
 
 const CardResult = ({ data }: CardResultProps) => {

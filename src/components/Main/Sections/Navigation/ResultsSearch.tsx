@@ -1,5 +1,5 @@
-import { SearchProps } from '../../../interface/props'
-import * as style from '../../../styles/navigation_main'
+import { SearchProps } from '../../../../interface/props'
+import * as style from '../../../../styles/navigation_main'
 import NotFoundSearch from './NotFoundSearch'
 import OptionsResult from './OptionsResult'
 

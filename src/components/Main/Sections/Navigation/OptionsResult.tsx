@@ -1,7 +1,7 @@
 import { useContext } from 'react'
-import MusicContext from '../../../context/musicContext'
-import { Daum } from '../../../interface/search'
-import * as style from '../../../styles/navigation_main'
+import MusicContext from '../../../../context/musicContext'
+import { Daum } from '../../../../interface/search'
+import * as style from '../../../../styles/navigation_main'
 interface SearchResult {
   dataItem: Daum
 }

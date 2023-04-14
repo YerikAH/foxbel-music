@@ -9,11 +9,11 @@ import { routeSearchMenu } from '../../helpers/helpers'
 import IconPlus from '../icons/IconPlus'
 import IconHam from '../icons/IconHam'
 import IconClose from '../icons/IconClose'
-import Modal from '../Main/Sections/Modal'
-import Playlist from '../Main/Sections/Playlist'
+import Modal from '../Main/Sections/Float/Modal'
+import Playlist from '../Main/Sections/Float/Playlist'
 import LocalStorageContext from '../../context/localStorageContext'
 import IconTrash from '../icons/IconTrash'
-import ModalWarning from '../Main/Sections/ModalWarning'
+import ModalWarning from '../Main/Sections/Float/ModalWarning'
 const MenuOption = () => {
   const [navData, setNavData] = useState<MenuOptions[]>(LINK_LIBRARY)
   const location = useLocation()
@@ -40,7 +40,6 @@ const MenuOption = () => {
     setWarning(true)
   }
 
-  
   useEffect(() => {
     const select = routeSearchMenu(location.pathname)
     const newData = changeTrueValue(LINK_LIBRARY, select)
@@ -55,6 +54,11 @@ const MenuOption = () => {
     }
   }, [open])
 
+  const handleOpenModal = () => {
+    console.log(openModal)
+    setOpenModal(true)
+    console.log(openModal)
+  }
   useEffect(() => {
     console.log(localStorage.getItem(PLAYLIST_STORAGE))
     const playList = localStorage.getItem(PLAYLIST_STORAGE)
@@ -87,14 +91,16 @@ const MenuOption = () => {
           <style.MenuUl>
             <style.MenuLinkTitle className='bottom'>Playlist</style.MenuLinkTitle>
             {playList.map((item, idx) => (
-              <style.ListPlaylist key={idx} >
-                <style.ListPlaylistText  onClick={() => handleFilter(item.name)} tabIndex={1}>{item.name}</style.ListPlaylistText>
-                <style.ListPlaylistRemove onClick={()=> handleRemove(item.name)} tabIndex={1}>
+              <style.ListPlaylist key={idx}>
+                <style.ListPlaylistText onClick={() => handleFilter(item.name)} tabIndex={1}>
+                  {item.name}
+                </style.ListPlaylistText>
+                <style.ListPlaylistRemove onClick={() => handleRemove(item.name)} tabIndex={1}>
                   <IconTrash />
                 </style.ListPlaylistRemove>
               </style.ListPlaylist>
             ))}
-            <style.MenuListButton onClick={() => setOpenModal(!open)}>
+            <style.MenuListButton onClick={handleOpenModal}>
               <IconPlus />
               Crear playlist
             </style.MenuListButton>
@@ -102,7 +108,9 @@ const MenuOption = () => {
         </style.MenuBoxUl>
         {openModal && <Modal setOpenModal={setOpenModal} />}
         {openMusic && <Playlist setOpenMusic={setOpenMusic} data={dataFilter} />}
-        {warning && <ModalWarning playList={playList} name={nameComponent} setWarning={setWarning}/>}
+        {warning && (
+          <ModalWarning playList={playList} name={nameComponent} setWarning={setWarning} />
+        )}
       </style.NavigationMenu>
     </>
   )

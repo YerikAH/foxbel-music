@@ -1,9 +1,9 @@
 import { useContext } from 'react'
-import MusicContext from '../../../context/musicContext'
-import { CardArtistProps } from '../../../interface/props'
-import * as style from '../../../styles/card'
-import BannerOptionContext from '../../../context/bannerOptionContext'
-import { ALBUM_LIST } from '../../../constant/constant'
+import MusicContext from '../../../../context/musicContext'
+import { CardArtistProps } from '../../../../interface/props'
+import * as style from '../../../../styles/card'
+import BannerOptionContext from '../../../../context/bannerOptionContext'
+import { ALBUM_LIST } from '../../../../constant/constant'
 
 const CardArtist = ({ data }: CardArtistProps) => {
   const musicContext = useContext(MusicContext)

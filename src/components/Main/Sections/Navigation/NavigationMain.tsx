@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
-import * as style from '../../../styles/navigation_main'
-import IconSearch from '../../icons/IconSearch'
-import IconUser from '../../icons/IconUser'
-import { useSearch } from '../../../hook/useSearch'
-import { RootSearch } from '../../../interface/search'
+import * as style from '../../../../styles/navigation_main'
+import IconSearch from '../../../icons/IconSearch'
+import IconUser from '../../../icons/IconUser'
+import { useSearch } from '../../../../hook/useSearch'
+import { RootSearch } from '../../../../interface/search'
 import ResultsSearch from './ResultsSearch'
 
 const NavigationMain = () => {

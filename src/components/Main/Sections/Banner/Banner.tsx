@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from 'react'
-import * as style from '../../../styles/banner'
-import MusicContext from '../../../context/musicContext'
+import * as style from '../../../../styles/banner'
+import MusicContext from '../../../../context/musicContext'
 import BannerAutor from './BannerAutor'
 import BannerInfo from './BannerInfo'
-import FetchContext from '../../../context/fetchContext'
-import { Daum } from '../../../interface/chart'
-import { useSearchWiki } from '../../../hook/useSearchWiki'
-import { Search } from '../../../interface/searchWiki'
+import FetchContext from '../../../../context/fetchContext'
+import { Daum } from '../../../../interface/chart'
+import { useSearchWiki } from '../../../../hook/useSearchWiki'
+import { Search } from '../../../../interface/searchWiki'
 
 const Banner = () => {
   const [musicSelect, setMusicSelect] = useState<Daum|null >(null)

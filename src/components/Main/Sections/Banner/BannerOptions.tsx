@@ -1,11 +1,11 @@
 import { useContext, useEffect } from 'react'
-import BannerOptionContext from '../../../context/bannerOptionContext'
-import * as style from '../../../styles/banner'
-import * as style2 from '../../../styles/banner_option'
-import { ArtistList } from '../../../interface/artistMusic'
-import PlaceImage from '../../../assets/foxbel-music.png'
-import { ErrorRoot } from '../../../interface/error'
-import { AlbumMusic } from '../../../interface/albumMusic'
+import BannerOptionContext from '../../../../context/bannerOptionContext'
+import * as style from '../../../../styles/banner'
+import * as style2 from '../../../../styles/banner_option'
+import { ArtistList } from '../../../../interface/artistMusic'
+import PlaceImage from '../../../../assets/foxbel-music.png'
+import { ErrorRoot } from '../../../../interface/error'
+import { AlbumMusic } from '../../../../interface/albumMusic'
 import BannerOptionRender from './BannerOptionRender'
 
 const BannerOption = () => {

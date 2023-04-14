@@ -1,15 +1,15 @@
 import { useContext } from 'react'
 import MusicContext from '../../../context/musicContext'
-import NavigationMain from './NavigationMain'
-import WidgetDeezer from './WidgetDeezer'
-import Banner from './Banner'
+import NavigationMain from './Navigation/NavigationMain'
+import WidgetDeezer from './Banner/WidgetDeezer'
+import Banner from './Banner/Banner'
 import { useLocation } from 'react-router-dom'
 import { PathRoutes } from '../../../enum/enum'
-import Recent from './Recent'
-import Artist from './Artist'
-import Album from './Album'
-import Podcast from './Podcast'
-import BannerOption from './BannerOptions'
+import Recent from './Conditional/Recent'
+import Artist from './Conditional/Artist'
+import Album from './Conditional/Album'
+import Podcast from './Conditional/Podcast'
+import BannerOption from './Banner/BannerOptions'
 
 const Page = () => {
   const musicContext = useContext(MusicContext)

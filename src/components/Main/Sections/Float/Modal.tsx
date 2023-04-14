@@ -1,11 +1,11 @@
 import ReactDOM from 'react-dom'
-import * as style from '../../../styles/modal'
-import IconClose from '../../icons/IconClose'
-import { elementHtmlSelect } from '../../../helpers/helpers'
-import { InterfacePlaylist, ModalProps } from '../../../interface/interface'
+import * as style from '../../../../styles/modal'
+import IconClose from '../../../icons/IconClose'
+import { elementHtmlSelect } from '../../../../helpers/helpers'
+import { InterfacePlaylist, ModalProps } from '../../../../interface/interface'
 import { useContext, useState } from 'react'
-import { PLAYLIST_STORAGE } from '../../../constant/constant'
-import LocalStorageContext from '../../../context/localStorageContext'
+import { PLAYLIST_STORAGE } from '../../../../constant/constant'
+import LocalStorageContext from '../../../../context/localStorageContext'
 
 const Modal = ({setOpenModal}:ModalProps) => {
   const modalHTML = document.getElementById('modal')

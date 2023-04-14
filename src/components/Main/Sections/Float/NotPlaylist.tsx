@@ -1,5 +1,5 @@
-import * as style from '../../../styles/playlist'
-import IconNotSearch from '../../icons/IconNotSearch'
+import * as style from '../../../../styles/playlist'
+import IconNotSearch from '../../../icons/IconNotSearch'
 
 const NotPlaylist = () => {
   return (

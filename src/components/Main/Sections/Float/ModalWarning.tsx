@@ -1,9 +1,9 @@
 import { useContext } from 'react'
-import LocalStorageContext from '../../../context/localStorageContext'
-import { InterfacePlaylist, WarningProps } from '../../../interface/interface'
-import * as style from '../../../styles/modal_warning'
-import IconClose from '../../icons/IconClose'
-import { PLAYLIST_STORAGE } from '../../../constant/constant'
+import LocalStorageContext from '../../../../context/localStorageContext'
+import { InterfacePlaylist, WarningProps } from '../../../../interface/interface'
+import * as style from '../../../../styles/modal_warning'
+import IconClose from '../../../icons/IconClose'
+import { PLAYLIST_STORAGE } from '../../../../constant/constant'
 
 const ModalWarning = ({ setWarning, playList, name }: WarningProps) => {
   const localStorageContext = useContext(LocalStorageContext)

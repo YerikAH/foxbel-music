@@ -1,10 +1,10 @@
-import { DetailsMusicProps } from '../../../interface/props'
-import * as style from '../../../styles/banner'
-import placeImage from '../../../assets/foxbel-music-icon@3x.png'
-import PlayerContext from '../../../context/playerContext'
+import { DetailsMusicProps } from '../../../../interface/props'
+import * as style from '../../../../styles/banner'
+import placeImage from '../../../../assets/foxbel-music-icon@3x.png'
+import PlayerContext from '../../../../context/playerContext'
 import { useContext } from 'react'
-import IconPause from '../../icons/IconPause'
-import IconPlay from '../../icons/IconPlay'
+import IconPause from '../../../icons/IconPause'
+import IconPlay from '../../../icons/IconPlay'
 const BannerAutor = ({ data }: DetailsMusicProps) => {
   const playerContext = useContext(PlayerContext)
   return (

@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from 'react'
-import { DetailsMusicProps } from '../../../interface/props'
-import * as style from '../../../styles/banner'
-import IconVerticalDots from '../../icons/IconVerticalDots'
-import PlayerContext from '../../../context/playerContext'
-import LocalStorageContext from '../../../context/localStorageContext'
-import Modal from './Modal'
-import Popup from './Popup'
-import { InterfaceMusic } from '../../../interface/interface'
+import { DetailsMusicProps } from '../../../../interface/props'
+import * as style from '../../../../styles/banner'
+import IconVerticalDots from '../../../icons/IconVerticalDots'
+import PlayerContext from '../../../../context/playerContext'
+import LocalStorageContext from '../../../../context/localStorageContext'
+import Modal from '../Float/Modal'
+import Popup from '../Float/Popup'
+import { InterfaceMusic } from '../../../../interface/interface'
 
 const BannerInfo = ({ data, extra }: DetailsMusicProps) => {
   const playerContext = useContext(PlayerContext)

@@ -4,7 +4,7 @@ export const ModalStyles = styled.div`
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 6000;
+  z-index: 9500;
   overflow: auto;
   padding: 1rem;
   background:var(--black-opacity);

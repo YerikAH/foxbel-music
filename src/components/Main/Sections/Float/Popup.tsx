@@ -1,8 +1,8 @@
 import { useContext, useEffect, useState } from 'react'
-import * as style from '../../../styles/popup'
-import { InterfaceMusic, InterfacePlaylist, PopupProps } from '../../../interface/interface'
-import { PLAYLIST_STORAGE } from '../../../constant/constant'
-import LocalStorageContext from '../../../context/localStorageContext'
+import * as style from '../../../../styles/popup'
+import { InterfaceMusic, InterfacePlaylist, PopupProps } from '../../../../interface/interface'
+import { PLAYLIST_STORAGE } from '../../../../constant/constant'
+import LocalStorageContext from '../../../../context/localStorageContext'
 
 const Popup = ({ data }: PopupProps) => {
   const [playList, setPlayList] = useState<InterfacePlaylist[]>([])

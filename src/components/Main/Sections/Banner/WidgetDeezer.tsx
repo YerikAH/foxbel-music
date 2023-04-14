@@ -1,4 +1,4 @@
-import * as style from '../../../styles/main'
+import * as style from '../../../../styles/main'
 const WidgetDeezer = () => {
   return (
     <style.IframeDezzer>

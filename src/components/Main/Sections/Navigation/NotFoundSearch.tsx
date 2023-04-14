@@ -1,5 +1,5 @@
-import * as style from '../../../styles/navigation_main'
-import IconNotSearch from '../../icons/IconNotSearch'
+import * as style from '../../../../styles/navigation_main'
+import IconNotSearch from '../../../icons/IconNotSearch'
 
 const NotFoundSearch = () => {
   return (

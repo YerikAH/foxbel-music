@@ -1,8 +1,8 @@
 import ReactDOM from 'react-dom'
-import { elementHtmlSelect } from '../../../helpers/helpers'
-import * as style from '../../../styles/playlist'
-import IconClose from '../../icons/IconClose'
-import { PlaylistProps } from '../../../interface/props'
+import { elementHtmlSelect } from '../../../../helpers/helpers'
+import * as style from '../../../../styles/playlist'
+import IconClose from '../../../icons/IconClose'
+import { PlaylistProps } from '../../../../interface/props'
 import NotPlaylist from './NotPlaylist'
 
 const Playlist = ({data,setOpenMusic}:PlaylistProps) => {

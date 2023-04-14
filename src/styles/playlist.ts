@@ -4,7 +4,7 @@ export const PlaylistStyle = styled.div`
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 5000;
+  z-index: 10000;
   overflow: auto;
   padding: 1rem;
   background: var(--black-opacity);

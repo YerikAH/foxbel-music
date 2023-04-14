@@ -1,5 +1,5 @@
-import { CardPodcastProps } from '../../../interface/props'
-import * as style from '../../../styles/card'
+import { CardPodcastProps } from '../../../../interface/props'
+import * as style from '../../../../styles/card'
 const CardPodcast = ({ data }: CardPodcastProps) => {
   return (
     <style.CardResult>
